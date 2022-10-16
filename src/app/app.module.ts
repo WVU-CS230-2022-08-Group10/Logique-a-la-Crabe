@@ -7,6 +7,8 @@ import { MainHeaderComponent } from './nav-bars/main-header/main-header.componen
 import { MainFooterComponent } from './nav-bars/main-footer/main-footer.component';
 import { GateInfoCardComponent } from './secondary-page/logic-gates/gate-info-card/gate-info-card.component';
 import { LogicGatesLayoutComponent } from './secondary-page/logic-gates/logic-gates-layout/logic-gates-layout.component';
+import { PrimaryPageComponent } from './primary-page/primary-page.component';
+import { GatesComponent } from './primary-page/gates/gates.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { LogicGatesLayoutComponent } from './secondary-page/logic-gates/logic-ga
     MainHeaderComponent,
     MainFooterComponent,
     GateInfoCardComponent,
-    LogicGatesLayoutComponent
+    LogicGatesLayoutComponent,
+    PrimaryPageComponent,
+    GatesComponent
   ],
   imports: [
     BrowserModule,

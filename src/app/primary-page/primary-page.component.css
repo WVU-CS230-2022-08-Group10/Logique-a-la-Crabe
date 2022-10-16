@@ -1,0 +1,23 @@
+.header{
+    text-align: center;
+}
+.page-container{
+    display: flex;
+    height: 500px;
+}
+.gate-list{
+    width: 20%;
+    text-align: center;
+    background-color: gray;
+    overflow-y: scroll;
+}
+.board{
+    text-align: center;
+    margin-left: 7%;
+    background-color: bisque;
+    width: 60%;
+}
+.gates{
+    border: 1px solid black;
+    background-color: #D4D9D8;
+}
