@@ -11,7 +11,7 @@ export class LogicGatesLayoutComponent implements OnInit {
   gate_info: gate_info_model[] = [];
 
   constructor() {
-    for(var item of gate_info_card) {
+    for (var item of gate_info_card) {
       console.log(item);
       this.gate_info.push(item);
     }

@@ -1,11 +1,23 @@
 <div class="layout container-fluid">
     <div class="intro">
         <h5>A Quick Introduction to Digital Logic Gates</h5>
-        <p>Logic gates are the building blocks of any circuit design and are what allow computers to "think" and make decisions on what to do.</p>
-        <p>Logic gates take one or more inputs, perform a specific function, and then produce an output. Digital logic gates take inputs in the form of 1s and 0s, 1s represent that something is "true", also known as being "on", while 0s represent "false" which is also known as being "off". This use of 1s and 0s is known as binary which is the universal language all machines understand and its up to the logic gates to tell the computer how to read the binary to make a final decision or output. The function of a logic gate can be represented in several ways, however we will focus on using truth tables. A truth table is a table filled with all the possible combinations of the inputs and the specific output for each combination.</p> 
-        <p>The most fundemental logic gates are the AND, OR and NOT because from these three basic logical functions other functions can be created such as the NAND gate which is a combination of the AND and NOT gate. The below cards provide more information of each of the different logic gates. Pay close attention the their truth tables as they will help you better understand what outputs to expect with any combination inputs. There are also linked examples that demonstrate how the logic gate works with other gates in a circuit. </p>
+        <p>Logic gates are the building blocks of any circuit design and are what allow computers to "think" and make
+            decisions on what to do.</p>
+        <p>Logic gates take one or more inputs, perform a specific function, and then produce an output. Digital logic
+            gates take inputs in the form of 1s and 0s, 1s represent that something is "true", also known as being "on",
+            while 0s represent "false" which is also known as being "off". This use of 1s and 0s is known as binary
+            which is the universal language all machines understand and its up to the logic gates to tell the computer
+            how to read the binary to make a final decision or output. The function of a logic gate can be represented
+            in several ways, however we will focus on using truth tables. A truth table is a table filled with all the
+            possible combinations of the inputs and the specific output for each combination.</p>
+        <p>The most fundemental logic gates are the AND, OR and NOT because from these three basic logical functions
+            other functions can be created such as the NAND gate which is a combination of the AND and NOT gate. The
+            below cards provide more information of each of the different logic gates. Pay close attention the their
+            truth tables as they will help you better understand what outputs to expect with any combination inputs.
+            There are also linked examples that demonstrate how the logic gate works with other gates in a circuit. </p>
     </div>
     <div class="d-flex flex-row flex-wrap justify-content-around">
-        <app-gate-info-card *ngFor="let text of gate_info" img = {{text.gate_image}} title = {{text.gate_name}} text = {{text.gate_description}}>Loading...</app-gate-info-card>
+        <app-gate-info-card *ngFor="let text of gate_info" img={{text.gate_image}} title={{text.gate_name}}
+            text={{text.gate_description}}>Loading...</app-gate-info-card>
     </div>
 </div>

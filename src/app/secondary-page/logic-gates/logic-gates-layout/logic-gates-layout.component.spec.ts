@@ -8,9 +8,9 @@ describe('LogicGatesLayoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LogicGatesLayoutComponent ]
+      declarations: [LogicGatesLayoutComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

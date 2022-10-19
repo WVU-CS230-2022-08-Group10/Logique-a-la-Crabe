@@ -6,11 +6,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./gate-info-card.component.css']
 })
 export class GateInfoCardComponent implements OnInit {
-  @Input () img: string;
-  @Input () title: string;
-  @Input () text: string;
+  @Input() img: string;
+  @Input() title: string;
+  @Input() text: string;
 
-  constructor() { 
+  constructor() {
     this.img = "";
     this.title = "";
     this.text = "";

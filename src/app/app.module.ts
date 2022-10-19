@@ -9,6 +9,8 @@ import { GateInfoCardComponent } from './secondary-page/logic-gates/gate-info-ca
 import { LogicGatesLayoutComponent } from './secondary-page/logic-gates/logic-gates-layout/logic-gates-layout.component';
 import { PrimaryPageComponent } from './primary-page/primary-page.component';
 import { GatesComponent } from './primary-page/gates/gates.component';
+import { PracticeLayoutComponent } from './secondary-page/practice-examples/practice-layout/practice-layout.component';
+import { PracticeCardComponent } from './secondary-page/practice-examples/practice-card/practice-card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { GatesComponent } from './primary-page/gates/gates.component';
     GateInfoCardComponent,
     LogicGatesLayoutComponent,
     PrimaryPageComponent,
-    GatesComponent
+    GatesComponent,
+    PracticeLayoutComponent,
+    PracticeCardComponent
   ],
   imports: [
     BrowserModule,

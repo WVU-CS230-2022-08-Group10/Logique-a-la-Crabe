@@ -8,9 +8,9 @@ describe('GateInfoCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GateInfoCardComponent ]
+      declarations: [GateInfoCardComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

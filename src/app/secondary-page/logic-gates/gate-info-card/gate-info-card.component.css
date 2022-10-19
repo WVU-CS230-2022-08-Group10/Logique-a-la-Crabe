@@ -1,10 +1,10 @@
-.card{
+.card {
     background-color: whitesmoke;
     margin-top: .5in;
     margin-bottom: .5in;
 }
 
-.btn-primary{
-   background-color: darkslategrey;
-   border-color: darkslategrey;
+.btn-primary {
+    background-color: darkslategrey;
+    border-color: darkslategrey;
 }
