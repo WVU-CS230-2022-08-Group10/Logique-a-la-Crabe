@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {DragDropModule} from '@angular/cdk/drag-drop'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { PrimaryPageComponent } from './primary-page/primary-page.component';
 import { GatesComponent } from './primary-page/gates/gates.component';
 import { PracticeLayoutComponent } from './secondary-page/practice-examples/practice-layout/practice-layout.component';
 import { PracticeCardComponent } from './secondary-page/practice-examples/practice-card/practice-card.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { PracticeCardComponent } from './secondary-page/practice-examples/practi
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
