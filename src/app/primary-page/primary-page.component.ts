@@ -11,7 +11,7 @@ import { GatesModel } from './gates/gates.model';
 export class PrimaryPageComponent implements OnInit {
   gates: GatesModel[] = [];
 
-  constructor() { 
+  constructor() {
     for(var x of gates){
       this.gates.push(x);
     }

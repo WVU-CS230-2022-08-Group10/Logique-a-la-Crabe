@@ -1,6 +1,6 @@
 <h4 class="type">{{type}}</h4>
-<div class="mx-5" style="background:white">
-    <img cdkDrag class="picture"src={{pic}}>
+<div class="mx-5" style="background:white" id="holder">
+    <img onload="setDrag()" id="gate" class="picture" src={{pic}} draggable="false">
 </div>
 
 <p>Number of inputs: {{inputs}}</p>
