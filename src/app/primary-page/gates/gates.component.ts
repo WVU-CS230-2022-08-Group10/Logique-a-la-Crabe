@@ -9,12 +9,14 @@ export class GatesComponent implements OnInit {
   @Input() type: string;
   @Input() pic: string;
   @Input() inputs: string;
+  @Input() id: string;
 
 
   constructor() {
     this.type = "missing type";
     this.pic= "missing pic";
     this.inputs = "missing number of inputs";
+    this.id = "missing id"
    }
 
   ngOnInit(): void {

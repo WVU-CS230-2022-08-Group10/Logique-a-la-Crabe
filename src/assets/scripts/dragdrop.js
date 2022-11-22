@@ -7,16 +7,16 @@ var width = window.screen.width / 4;
 function setCanvas() {
     canvas = document.getElementById("canvas");
     canvas.style.left = width + 'px';
-    gate = document.getElementById("gate");
-    gateCoords = [gate.getBoundingClientRect().x, gate.getBoundingClientRect().y];
-    originalgateCoords = [gate.getBoundingClientRect().x, gate.getBoundingClientRect().y];
+    // gate = document.getElementById("gate");
+    // gateCoords = [gate.getBoundingClientRect().x, gate.getBoundingClientRect().y];
+    // originalgateCoords = [gate.getBoundingClientRect().x, gate.getBoundingClientRect().y];
     canvasCoords = [width, canvas.getBoundingClientRect().y];
     counter = 0;
 }
 
 // Adds an event listener so that the gate can be dragged when it is clicked on
-function setDrag() {
-    gateToMove = document.getElementById("gate");
+function setDrag(id) {
+    gateToMove = document.getElementById(id);
     gateToMove.setAttribute('draggable', false);
     
     gateToMove.addEventListener('mousedown', drag);
@@ -24,14 +24,16 @@ function setDrag() {
 
 //  start the process of dragging
 function drag(event) {
+    id = event.currentTarget.id;
+    gateToMove = document.getElementById(id);
     gate = gateToMove.cloneNode();
     gateToMove.removeEventListener('click', drag)
 
-    // None of these stop the default browser dragging, causes the image to require a double click
-    // gate.draggable = false;
-    // gate.addEventListener('dragstart', ev => {}, false)
-    // gate.ondragstart = function() { return false; };
-    // gate.setAttribute('draggable', false);
+    // None of these stop the default browser dragging, causes the image to require a click to drop
+    gate.draggable = false;
+    gate.addEventListener('dragstart', ev => {}, false)
+    gate.ondragstart = function() { return false; };
+    gate.setAttribute('draggable', false);
 
     gate.style.position = 'absolute';
     gate.style.zIndex = 1000;
@@ -60,7 +62,7 @@ function drop() {
         gate.onmouseup = null;
     }
     else {
-        gateCoords = [originalgateCoords[0], originalgateCoords[1]];
+        // gateCoords = [originalgateCoords[0], originalgateCoords[1]];
         document.removeEventListener('mousemove', onMouseMove);
         gate.onmouseup = null;
         gate.remove();

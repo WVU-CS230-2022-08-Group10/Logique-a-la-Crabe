@@ -6,8 +6,8 @@
     <div class="gate-list">
         <h3 class="mb-3">Gates</h3>
 
-        <div class="mb-2 gates" *ngFor="let x of gates">
-            <app-gates type={{x.type}} pic={{x.pic}} inputs={{x.inputs}}></app-gates>
+        <div class="mb-2 gates" *ngFor="let x of gates" draggable="false">
+            <app-gates type={{x.type}} pic={{x.pic}} inputs={{x.inputs}} id={{x.id}}></app-gates>
         </div>
 
     </div>
@@ -15,7 +15,7 @@
 
     <div class="board" id="canvas">
 
-        Board Placeholder
+
     </div>
 </body>
 
