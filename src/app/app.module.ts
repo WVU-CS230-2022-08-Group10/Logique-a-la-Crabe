@@ -13,6 +13,7 @@ import { GatesComponent } from './primary-page/gates/gates.component';
 import { PracticeLayoutComponent } from './secondary-page/practice-examples/practice-layout/practice-layout.component';
 import { PracticeCardComponent } from './secondary-page/practice-examples/practice-card/practice-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AccountPageLayoutComponent } from './account-page/account-page-layout.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PrimaryPageComponent,
     GatesComponent,
     PracticeLayoutComponent,
-    PracticeCardComponent
+    PracticeCardComponent,
+    AccountPageLayoutComponent
   ],
   imports: [
     BrowserModule,
