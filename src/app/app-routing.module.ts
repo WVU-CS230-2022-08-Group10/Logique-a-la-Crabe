@@ -7,6 +7,7 @@ import { LogicGatesLayoutComponent } from './logic-gates-module/logic-gates/logi
 import { TransistorModuleComponent } from './transistor-module/transistor-module.component';
 import { LogicGatesPracticeComponent } from './logic-gates-module/practice-layout/practice.component';
 import { BinaryModuleComponent } from './binary-module/binary-module.component';
+import { NoiseModuleComponent } from './noise-margins-module/noise-margins.component';
 
 const routes: Routes = [
   { path: 'logic-gates', component: LogicGatesLayoutComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'Account', component: AccountPageLayoutComponent },
   { path: 'Modules', component: ModuleListPageComponent },
   { path: 'Transistors', component: TransistorModuleComponent },
-  { path: 'Binary', component: BinaryModuleComponent }
+  { path: 'Binary', component: BinaryModuleComponent },
+  { path: 'NoiseMargins', component: NoiseModuleComponent }
 ];
 
 @NgModule({
