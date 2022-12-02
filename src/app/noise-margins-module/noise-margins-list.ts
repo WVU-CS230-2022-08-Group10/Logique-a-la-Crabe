@@ -1,38 +1,38 @@
 export const noise_margins_practice_questions = [
     {
-        question: "Question 1: If we're given an NMOS transistor and told that G is low and S is high, what is the output?",
-        correct_answer: "Low",
-        wrong_answer1: "High then  Low",
-        wrong_answer2: "High",
-        wrong_answer3: "Low then High"
+        question: "Question 1: Gate A has a VIL of 1, a VIH of 3, a VOL of 1, and a VIL of 3. Gate B has a VIL of 1.5, a VIH of 2.5, a VOL of .5, and a VIL of 4. If gate A is driving gate B, what is the NMH?",
+        correct_answer: ".5",
+        wrong_answer1: "1",
+        wrong_answer2: "-.5",
+        wrong_answer3: "0"
     },
     {
-        question: "Question 2: Transistors are built from ___",
-        correct_answer: "Doped Silicon",
-        wrong_answer1: "Silicon",
-        wrong_answer2: "Metal",
-        wrong_answer3: "Plastic"
+        question: "Question 2: Gate A has a VIL of 1, a VIH of 3, a VOL of 1, and a VIL of 3. Gate B has a VIL of 1.5, a VIH of 2.5, a VOL of .5, and a VIL of 4. If gate A is driving gate B, what is the NML?",
+        correct_answer: ".5",
+        wrong_answer1: "1",
+        wrong_answer2: "-.5",
+        wrong_answer3: "0"
     },
     {
-        question: "Question 3: If we're given a PMOS transistor and told that G is low and S is high, what is the output?",
-        correct_answer: "High",
-        wrong_answer1: "Low then High",
-        wrong_answer2: "High then Low",
-        wrong_answer3: "Low"
-    },
-    {
-        question: "Question 4: If we're given a truth table of an XOR gate, with A=1 and B=0, what is the output value?",
-        correct_answer: "1",
-        wrong_answer1: "2",
-        wrong_answer2: "0",
+        question: "Question 3: Gate A has a VIL of 1, a VIH of 3, a VOL of 1, and a VIL of 3. Gate B has a VIL of 1.5, a VIH of 2.5, a VOL of .5, and a VIL of 4. Can gate A drive gate B?",
+        correct_answer: "Yes",
+        wrong_answer1: "No",
+        wrong_answer2: "There is no margin",
         wrong_answer3: "Not enough information"
     },
     {
-        question: "Question 5: If we're given a truth table of a NOR gate, with A=0 and B=0, what is the output value?",
-        correct_answer: "1",
-        wrong_answer1: "0",
-        wrong_answer2: "0.5",
-        wrong_answer3: "-1"
+        question: "Question 4: Gate A has a VIL of 1, a VIH of 3, a VOL of 1, and a VIL of 3. Gate B has a VIL of 1.5, a VIH of 2.5, a VOL of .5, and a VIL of 4. Can gate B drive gate A?",
+        correct_answer: "Yes",
+        wrong_answer1: "No",
+        wrong_answer2: "There is no margin",
+        wrong_answer3: "Not enough information"
+    },
+    {
+        question: "Question 5: Gate A has a VIL of 1, a VIH of 3, a VOL of 1, and a VIL of 3. Gate B has a VIL of 1.5, a VIH of 2.5, a VOL of .5, and a VIL of 4. Can gate B drive gate B?",
+        correct_answer: "Yes",
+        wrong_answer1: "No",
+        wrong_answer2: "There is no margin",
+        wrong_answer3: "Not enough information"
     }
     
 ]
@@ -43,35 +43,35 @@ export const noise_margins_quiz_questions = [
         correct_answer: "",
         wrong_answer1: "",
         wrong_answer2: "",
-        wrong_answer3: ""
+        wrong_answer3: "Not enough information"
     },
     {
         question: "Question 2: ",
         correct_answer: "",
         wrong_answer1: "",
         wrong_answer2: "",
-        wrong_answer3: ""
+        wrong_answer3: "Not enough information"
     },
     {
         question: "Question 3: ",
         correct_answer: "",
         wrong_answer1: "",
         wrong_answer2: "",
-        wrong_answer3: ""
+        wrong_answer3: "Not enough information"
     },
     {
         question: "Question 4: ",
         correct_answer: "",
         wrong_answer1: "",
         wrong_answer2: "",
-        wrong_answer3: ""
+        wrong_answer3: "Not enough information"
     },
     {
         question: "Question 5: ",
         correct_answer: "",
         wrong_answer1: "",
         wrong_answer2: "",
-        wrong_answer3: ""
+        wrong_answer3: "Not enough information"
     }
     
 ]
