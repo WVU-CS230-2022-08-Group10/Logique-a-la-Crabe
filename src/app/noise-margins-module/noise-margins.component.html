@@ -4,10 +4,35 @@
         <div class="intro">
             <h1>Noise Margins</h1>
             <p>
-                text
+                When signals are pushed through a current they can collect voltage noise by the signal either dropping or raising. 
+                Noise margins are the area where signals can be pushed through a circuit safely.
+            </p>
+            <div class="figures">
+                <img src="/assets/noise.png" />
+            </div>
+            <p>
+                First, we need to define some variables
             </p>
             <p>
-                placeholder
+                VDD is the high signal with a binary value of 1
+            </p>
+            <p>
+                GND (ground) is the low signal with a binary value of 0
+            </p>
+            <p>
+                VOH is voltage output high and VOL is voltage output low
+            </p>
+            <p>
+                VIH is voltage input high and VIL is voltage input low
+            </p>
+            <p>
+                NMH is noise margin high and NML is noise margin low
+            </p>
+            <p>
+                To calculate the the noies margin high value use the formula... NMH = VOH - VIH
+            </p>
+            <p>
+                To calculate the noise margin low value use the formula... NML = VIH - VOL
             </p>
             <p>
             <h3 class="mb-0">Ready to move on? Try the practice problems: </h3>
@@ -58,3 +83,7 @@
     </div>
 
 </body>
+
+<p>
+    Image credited to https://vlsibasic.blogspot.com/2015/09/noise-margin.html
+</p>

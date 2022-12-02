@@ -24,3 +24,8 @@ p {
     font-size: large;
     line-height: 2;
 }
+img{
+    margin-left: .5in;
+    height: 30%;
+    width: 30%;
+}
