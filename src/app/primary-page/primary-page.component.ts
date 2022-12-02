@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { gates } from './gates/gates-list';
-import { GatesModel } from './gates/gates.model';
+import { gates } from './menu-gates/gates-list';
+import { GatesModel } from './menu-gates/gates.model';
 
 
 @Component({
@@ -12,7 +12,7 @@ export class PrimaryPageComponent implements OnInit {
   gates: GatesModel[] = [];
 
   constructor() {
-    for(var x of gates){
+    for (var x of gates) {
       this.gates.push(x);
     }
   }
