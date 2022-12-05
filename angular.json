@@ -30,7 +30,7 @@
               "src/custom-theme.scss",
               "src/styles.css"
             ],
-            "scripts": ["src/assets/scripts/dragdrop.js"]
+            "scripts": []
           },
           "configurations": {
             "production": {

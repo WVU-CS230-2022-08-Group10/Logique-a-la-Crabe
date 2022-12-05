@@ -1,6 +1,6 @@
 <h4 class="type">{{type}}</h4>
 <div class="mx-5" style="background:white" id="holder" draggable="false">
-    <img onload="setDrag(this.id)" id={{id}} class="picture" src={{pic}} draggable="false">
+    <img (mousedown)="dragdrop.drag($event, this.id)" id={{id}} class="picture" src={{pic}} draggable="false">
 </div>
 
 <p>Number of inputs: {{inputs}}</p>

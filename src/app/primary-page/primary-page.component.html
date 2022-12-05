@@ -1,12 +1,12 @@
 <HTML>
 
-<body onload="setCanvas()">
+<body (load)="setCanvas()">
     <h1 class="mt-5 header">Circuit Builder</h1>
 
     <div class="gate-list">
         <h3 class="mb-3">Gates</h3>
 
-        <div class="mb-2 gates" *ngFor="let x of gates" draggable="false">
+        <div class="mb-2 gates" *ngFor="let x of gates" draggable="false" id="list">
             <app-gates type={{x.type}} pic={{x.pic}} inputs={{x.inputs}} id={{x.id}}></app-gates>
         </div>
 
