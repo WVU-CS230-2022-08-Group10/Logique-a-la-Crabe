@@ -75,7 +75,6 @@ export class dragDrop {
     private async removeAnim() {
         var gateCoords = [this.gate.getBoundingClientRect().x, this.gate.getBoundingClientRect().y];
         while (gateCoords[0] > 100) {
-            console.log(gateCoords);
             this.gate.style.left = gateCoords[0] - 25 + "px";
             await this.sleep(0.5);
             gateCoords = [this.gate.getBoundingClientRect().x, this.gate.getBoundingClientRect().y];
