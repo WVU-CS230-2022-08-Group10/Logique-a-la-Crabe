@@ -3,7 +3,7 @@
 }
 .picture{
     position: relative;
-    width: 150px;
+    /* width: 150px; */
     height: 50px;
 }
 div, img{

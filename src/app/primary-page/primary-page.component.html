@@ -7,7 +7,8 @@
         <h3 class="mb-3">Gates</h3>
 
         <div class="mb-2 gates" *ngFor="let x of gates" draggable="false" id="list">
-            <app-gates type={{x.type}} pic={{x.pic}} inputs={{x.inputs}} id={{x.id}}></app-gates>
+            <app-gates type={{x.type}} svg={{x.svg}} inputs={{x.inputs}} id={{x.id}} viewbox={{x.viewbox}}></app-gates>
+
         </div>
 
     </div>

@@ -12,10 +12,11 @@ export class dragDrop {
 
     // Method for starting the drag
     public drag(dragEvent: MouseEvent, id: string) {
+        console.log("dragging");
         // Gets the element to drag
         var gateToMove = document.getElementById(id);
         // Clones the element so that the original stays in place
-        this.gate = gateToMove?.cloneNode() as HTMLElement;
+        this.gate = gateToMove?.cloneNode(true) as HTMLElement;
 
         this.originalGateCoords = [this.gate.getBoundingClientRect().left, this.gate.getBoundingClientRect().top];
 
