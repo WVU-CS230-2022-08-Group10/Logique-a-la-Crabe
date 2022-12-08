@@ -1,0 +1,15 @@
+.title{
+    text-align: center;
+    font-size: 30px;
+}
+ul{
+    list-style-type: none;
+}
+.show-button{
+    width: 7%;
+    height: 5%;
+}
+ol li{
+    display: inline;
+    margin-right: 8px;
+}

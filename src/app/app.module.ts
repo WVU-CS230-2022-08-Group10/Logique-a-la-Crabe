@@ -15,6 +15,8 @@ import { PracticeLayoutComponent } from './secondary-page/practice-examples/prac
 import { PracticeCardComponent } from './secondary-page/practice-examples/practice-card/practice-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccountPageLayoutComponent } from './account-page/account-page-layout.component';
+import { ModuleListPageComponent } from './module-list-page/module-list-page.component';
+import { TransistorModuleComponent } from './transistor-module/transistor-module.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { AccountPageLayoutComponent } from './account-page/account-page-layout.c
     GatesComponent,
     PracticeLayoutComponent,
     PracticeCardComponent,
-    AccountPageLayoutComponent
+    AccountPageLayoutComponent,
+    ModuleListPageComponent,
+    TransistorModuleComponent
   ],
   imports: [
     BrowserModule,
