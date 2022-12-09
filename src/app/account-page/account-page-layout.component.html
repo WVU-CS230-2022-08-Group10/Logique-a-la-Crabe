@@ -1,61 +1,107 @@
-
-
 <div class="layout container-fluid">
-    <div class="account">
-        <h5>Sign in or create an account!</h5>
-        <p>By logging in you can save your circuit designs to study or reference any time you want!</p>
 
-        <div class="card" style="width: 25rem;">
-            <div class="card-body">
-                <div class="mb-3">
-                    <label for="txtEmail" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="txtEmail" aria-describedby="emailHelp">
+    <div class="card" style="width: 25rem;">
+
+        <div class = "card-header" id = "header">
+            <h2>Sign up and start saving your progress</h2>
+        </div>
+
+        <div class="card-body">
+            <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+
+                <div class = "input-group mb-3">
+                    <span class = "input-group-text">Email</span>
+                    <input type = "text" class = "form-control" placeholder = "devine@mix.wvu.edu"
+                        ngModel name = "email"
+                        required email>
                 </div>
 
-                <label for="txtPassword" class="form-label">Password</label>
-                <input type="password" id="txtPassword" class="form-control" aria-describedby="passwordHelpBlock">
-                <p></p>
-              
-                <div class="d-flex justify-content-between">
-                    <button id="btnLogin" type="button" class="button buttonBlue">Log in</button>
-                    
+                <div class = "input-group mb-3">
+                    <span class = "input-group-text">Password</span>
+                    <input type = "password" class = "form-control" placeholder = "Min 5 characters"
+                        ngModel name = "password"
+                        required password minlength="5">
                 </div>
 
+                <div class = "input-group mb-3">
+                    <span class = "input-group-text">Confirm Password</span>
+                    <input type = "password" class = "form-control" placeholder = "Min 5 characters"
+                        ngModel name = "passwordConfirm"
+                        required password minlength="5">
+                </div>
+
+                <button class = "btn btn-dark m1" type = "submit" [disabled]="!authForm.valid" (click)="buttonClicked='Login'" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Sign up 
+                </button>
+            </form>
+
+        </div>
+    </div>
+    
+    <div class="card" style="width: 25rem;">
+
+        <div class = "card-header" id = "header">
+            <h2>Login to an existing account</h2>
+        </div>
+
+        <div class="card-body">
+            <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+
+                <div class = "input-group mb-3">
+                    <span class = "input-group-text">Email</span>
+                    <input type = "text" class = "form-control" placeholder = "devine@mix.wvu.edu"
+                        ngModel name = "email"
+                        required email>
+                </div>
+
+                <div class = "input-group mb-3">
+                    <span class = "input-group-text">Password</span>
+                    <input type = "password" class = "form-control" placeholder = "Min 5 characters"
+                        ngModel name = "password"
+                        required password minlength="5">
+                </div>
+
+                <button class = "btn btn-dark m1" type = "submit" [disabled]="!authForm.valid" (click)="buttonClicked='SignUp'">
+                    Login
+                </button>
+            </form>
+            
+        </div>
+    </div>
+
+
+    <div class="card" style="width: 12rem;">
+        <div class="card-body">
+            <div class="d-flex justify-content-between">
+                <a href="#" class="btn btn-primary"> View Saved Circuits</a>
             </div>
         </div>
     </div>
-    <!--
-
     
-    <div class="account">
-
-        <div class="card" style="width: 25rem;">
-            <div class="card-body">
-                <div class="mb-3">
-                    <label for="exampleInputEmail2" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
-                </div>
-
-                <label for="inputPassword5" class="form-label">Password</label>
-                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-                <p></p>
-                <label for="inputPassword5" class="form-label">Confirm Password</label>
-                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-                <p></p>
-                <div class="d-flex justify-content-between">
-                    <a href="#" class="btn btn-primary">Create an Account</a>
-                </div>
-            </div>
-        </div>
-        <div class="card" style="width: 12rem;">
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <a href="#" class="btn btn-primary"> View Saved Circuits</a>
-                </div>
-            </div>
-        </div>
-    </div>-->
-
-
 </div> 
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLabel">Thank you for creating an account!</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body" id = "body">
+            <div class = "row">
+                <img src = "assets/images/and_gate.jpg" style="width:100px;height:100px">
+            </div>
+        </div>
+       
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            <a class = "nav-link" href = "#">Click here to get back to learning</a> 
+            </button>
+        </div>
+      </div>
+    </div>
+</div>
+    
+    
 

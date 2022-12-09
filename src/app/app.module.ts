@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +16,11 @@ import { PracticeLayoutComponent } from './secondary-page/practice-examples/prac
 import { PracticeCardComponent } from './secondary-page/practice-examples/practice-card/practice-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccountPageLayoutComponent } from './account-page/account-page-layout.component';
-
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { AngularFireModule } from '@angular/fire/compat';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,13 +32,17 @@ import { AccountPageLayoutComponent } from './account-page/account-page-layout.c
     GatesComponent,
     PracticeLayoutComponent,
     PracticeCardComponent,
-    AccountPageLayoutComponent
+    AccountPageLayoutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DragDropModule
+    DragDropModule,
+    FormsModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
