@@ -18,6 +18,14 @@ export class PrimaryPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.setCanvas();
   }
+
+  public setCanvas(){
+    var width = window.screen.width / 4;
+    var canvas = document.getElementById("canvas");
+    if(canvas != null) canvas.style.left = width + 'px';
+  }
+
 
 }

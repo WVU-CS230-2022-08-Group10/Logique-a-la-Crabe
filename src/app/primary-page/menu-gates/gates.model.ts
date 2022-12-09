@@ -1,16 +1,17 @@
 
 export class GatesModel{
     type: string;
-    pic: string;
+    svg: String;
     inputs: string;
     id: string;
+    viewbox: string;
   
   
-    constructor(type: string,pic: string, inputs: string, id: string){
+    constructor(type: string,svg: String, inputs: string, id: string, viewbox: string){
       this.type = type;
-      this.pic = pic;
+      this.svg = svg;
       this.inputs = inputs;
       this.id = id;
-  
+      this.viewbox = viewbox;
   }
   }

@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, NgModule, OnInit } from '@angular/core';
+import { dragDrop } from './dragdrop';
 
 @Component({
   selector: 'app-gates',
@@ -7,19 +8,21 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GatesComponent implements OnInit {
   @Input() type: string;
-  @Input() pic: string;
+  @Input() svg: String;
   @Input() inputs: string;
   @Input() id: string;
+  @Input() viewbox: string;
+  dragdrop = new dragDrop;
 
 
   constructor() {
     this.type = "missing type";
-    this.pic= "missing pic";
+    this.svg = "missing svg path";
     this.inputs = "missing number of inputs";
     this.id = "missing id"
+    this.viewbox ="0 0 0 0"
    }
 
   ngOnInit(): void {
   }
-
-}
+} //End of class

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,10 @@ import { environment } from '../environments/environment';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { AngularFireModule } from '@angular/fire/compat';
+import { ModuleListPageComponent } from './module-list-page/module-list-page.component';
+import { TransistorModuleComponent } from './transistor-module/transistor-module.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +38,8 @@ import { AngularFireModule } from '@angular/fire/compat';
     PracticeLayoutComponent,
     PracticeCardComponent,
     AccountPageLayoutComponent,
+    ModuleListPageComponent,
+    TransistorModuleComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +50,7 @@ import { AngularFireModule } from '@angular/fire/compat';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
 
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
