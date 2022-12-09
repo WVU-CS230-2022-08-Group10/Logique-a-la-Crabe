@@ -5,13 +5,15 @@ import { ModuleListPageComponent } from './module-list-page/module-list-page.com
 import { PrimaryPageComponent } from './primary-page/primary-page.component';
 import { LogicGatesLayoutComponent } from './logic-gates-module/logic-gates/logic-gates-layout/logic-gates-layout.component';
 import { TransistorModuleComponent } from './transistor-module/transistor-module.component';
+import { BinaryModuleComponent } from './binary-module/binary-module.component';
 
 const routes: Routes = [
   { path: 'logic-gates', component: LogicGatesLayoutComponent },
   { path: '', component: PrimaryPageComponent },
   { path: 'Account', component: AccountPageLayoutComponent },
   { path: 'Modules', component: ModuleListPageComponent },
-  { path: 'Transistors', component: TransistorModuleComponent }
+  { path: 'Transistors', component: TransistorModuleComponent },
+  { path: 'Binary', component: BinaryModuleComponent}
 ];
 
 @NgModule({
