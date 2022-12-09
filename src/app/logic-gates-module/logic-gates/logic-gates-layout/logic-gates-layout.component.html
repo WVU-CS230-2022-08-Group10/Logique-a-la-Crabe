@@ -18,6 +18,6 @@
     </div>
     <div class="d-flex flex-row flex-wrap justify-content-around">
         <app-gate-info-card *ngFor="let text of gate_info" img={{text.gate_image}} title={{text.gate_name}}
-            text={{text.gate_description}}>Loading...</app-gate-info-card>
+            text={{text.gate_description}} table={{text.truth_table}}>Loading...</app-gate-info-card>
     </div>
 </div>

@@ -3,9 +3,11 @@
   <div class="card-body">
     <h2 class="card-title">{{title}}</h2>
     <p class="card-text">{{text}}</p>
-    <div class="d-flex justify-content-between">
-      <a href="#" class="btn btn-secondary">See Truth Table</a>
-      <a href="#" class="btn btn-primary">See Example</a>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-secondary mt-0" (click)="showTables()">See Truth Table</button>
+    </div>
+    <div *ngIf="showTable">
+      <img class="table" src={{table}} alt="table image">
     </div>
   </div>
 </div>
