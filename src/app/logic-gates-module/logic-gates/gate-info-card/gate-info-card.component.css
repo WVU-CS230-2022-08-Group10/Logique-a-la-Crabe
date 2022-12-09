@@ -2,6 +2,12 @@
     background-color: whitesmoke;
     margin-top: .5in;
     margin-bottom: .5in;
+    width: 25rem;
+    height: 27rem;
+}
+
+.card-img-top {
+    height: 25rem;
 }
 
 .btn-primary {
