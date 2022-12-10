@@ -20,4 +20,9 @@
         <app-gate-info-card *ngFor="let text of gate_info" img={{text.gate_image}} title={{text.gate_name}}
             text={{text.gate_description}} table={{text.truth_table}}>Loading...</app-gate-info-card>
     </div>
+    <div class="practice">
+        <h2>When you're ready for some practice click the button below!</h2>
+        <button class="btn btn-primary mt-0"><a routerLink="/logic-gates/practice">Go to Practice Problems</a></button>
+    </div>
+    <app-main-footer></app-main-footer>
 </div>

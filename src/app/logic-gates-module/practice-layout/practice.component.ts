@@ -4,11 +4,11 @@ import { practice_questions } from './questions-answers-list';
 import { quiz_questions } from './questions-answers-list';
 
 @Component({
-  selector: 'app-transistor-module',
-  templateUrl: './transistor-module.component.html',
-  styleUrls: ['./transistor-module.component.css']
+  selector: 'app-practice',
+  templateUrl: './practice.component.html',
+  styleUrls: ['./practice.component.css']
 })
-export class TransistorModuleComponent implements OnInit {
+export class LogicGatesPracticeComponent implements OnInit {
   showPractice: boolean;
   showQuiz: boolean;
   currentQuestion: number;
@@ -54,9 +54,9 @@ export class TransistorModuleComponent implements OnInit {
       if (tochange != null && this.currentQuestion < 5)
         tochange.innerHTML = practice_questions[this.currentQuestion].question;
       this.currentQuestion = this.currentQuestion + 1;
-      this.correctAnswer = this.getRandomInt(4);
+      this.correctAnswer = this.getRandomInt(2);
 
-      if (this.currentQuestion == 6){
+      if (this.currentQuestion == 6) {
         this.finishedPractice = true;
         this.currentQuestion = 1;
       }
@@ -72,7 +72,7 @@ export class TransistorModuleComponent implements OnInit {
     if (this.correctAnswer == parseInt(clicked) && !this.finishedQuiz) {
       this.showCorrect();
       var tochange = document.getElementById("question");
-      if (tochange != null  && this.currentQuestion < 5)
+      if (tochange != null && this.currentQuestion < 5)
         tochange.innerHTML = quiz_questions[this.currentQuestion].question;
       this.currentQuestion = this.currentQuestion + 1;
       this.correctAnswer = this.getRandomInt(4);
