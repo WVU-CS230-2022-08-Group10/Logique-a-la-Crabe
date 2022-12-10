@@ -22,7 +22,7 @@ import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { AngularFireModule } from '@angular/fire/compat';
 import { ModuleListPageComponent } from './module-list-page/module-list-page.component';
 import { TransistorModuleComponent } from './transistor-module/transistor-module.component';
-
+import { BinaryModuleComponent } from './binary-module/binary-module.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,8 @@ import { TransistorModuleComponent } from './transistor-module/transistor-module
     GatesComponent,
     AccountPageLayoutComponent,
     ModuleListPageComponent,
-    TransistorModuleComponent
+    TransistorModuleComponent,
+    BinaryModuleComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +46,6 @@ import { TransistorModuleComponent } from './transistor-module/transistor-module
     FormsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
-
     CommonModule
   ],
   providers: [],
