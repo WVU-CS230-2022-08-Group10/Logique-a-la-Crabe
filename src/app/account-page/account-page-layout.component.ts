@@ -9,29 +9,29 @@ import { Observable } from "rxjs";
     templateUrl: './account-page-layout.component.html',
     styleUrls: ['./account-page-layout.component.css']
 })
-export class AccountPageLayoutComponent{
-    public buttonClicked!:string;
+export class AccountPageLayoutComponent {
+    public buttonClicked!: string;
     private authObservable!: Observable<AuthResponse>;
 
-    constructor(private authService:AuthService){}
- 
-    public onSubmit(data: NgForm){
+    constructor(private authService: AuthService) { }
+
+    public onSubmit(data: NgForm) {
         console.log("Button clicked = " + this.buttonClicked);
         console.log(data.value);
 
-        if (this.buttonClicked == 'SignUp'){
+        if (this.buttonClicked == 'SignUp') {
             this.authObservable = this.authService.signup(data.value.email, data.value.password);
         }
-        if (this.buttonClicked == 'Login'){
+        if (this.buttonClicked == 'Login') {
             this.authObservable = this.authService.login(data.value.email, data.value.password);
         }
 
         this.authObservable.subscribe(
-            (data:AuthResponse) =>{
-            console.log(data);
-        });
+            (data: AuthResponse) => {
+                console.log(data);
+            });
 
     }
-    
-   
+
+
 }
