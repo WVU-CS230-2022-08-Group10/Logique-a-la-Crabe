@@ -13,11 +13,11 @@ const routes: Routes = [
   { path: 'logic-gates', component: LogicGatesLayoutComponent },
   { path: 'logic-gates/practice', component: LogicGatesPracticeComponent },
   { path: '', component: PrimaryPageComponent },
-  { path: 'Account', component: AccountPageLayoutComponent },
+  { path: 'account', component: AccountPageLayoutComponent },
   { path: 'Modules', component: ModuleListPageComponent },
-  { path: 'Transistors', component: TransistorModuleComponent },
-  { path: 'Binary', component: BinaryModuleComponent },
-  { path: 'NoiseMargins', component: NoiseModuleComponent }
+  { path: 'transistors', component: TransistorModuleComponent },
+  { path: 'binary-numbers', component: BinaryModuleComponent },
+  { path: 'noise-margins', component: NoiseModuleComponent }
 ];
 
 @NgModule({

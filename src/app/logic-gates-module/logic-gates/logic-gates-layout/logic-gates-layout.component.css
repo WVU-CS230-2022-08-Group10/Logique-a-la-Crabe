@@ -19,3 +19,8 @@
 a {
     color: white;
 }
+
+p {
+    font-size: large;
+    line-height: 2;
+}

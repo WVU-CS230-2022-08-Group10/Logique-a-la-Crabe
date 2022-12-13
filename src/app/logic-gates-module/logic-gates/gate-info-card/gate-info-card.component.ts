@@ -11,6 +11,7 @@ export class GateInfoCardComponent implements OnInit {
   @Input() text: string;
   @Input() table: string;
   showTable: boolean;
+  count: number;
 
   sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
 
@@ -20,10 +21,16 @@ export class GateInfoCardComponent implements OnInit {
     this.text = "";
     this.table = "";
     this.showTable = false;
+    this.count = 0;
   }
 
   showTables() {
     this.showTable = true;
+    this.count++;
+    if (this.count > 1) {
+      this.showTable = false;
+      this.count = 0;
+    }
   }
 
 

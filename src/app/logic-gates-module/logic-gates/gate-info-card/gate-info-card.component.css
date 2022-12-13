@@ -10,9 +10,13 @@
     height: 25rem;
 }
 
+.card-text {
+    font-size: medium;
+}
+
 .table {
-    height: 16rem;
-    width: 16rem;
+    height: 18rem;
+    width: 18rem;
 }
 
 .btn-primary {

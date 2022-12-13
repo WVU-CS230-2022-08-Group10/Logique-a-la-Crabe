@@ -19,4 +19,8 @@ export class LogicGatesLayoutComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showPracticeProblems() {
+
+  }
+
 }
