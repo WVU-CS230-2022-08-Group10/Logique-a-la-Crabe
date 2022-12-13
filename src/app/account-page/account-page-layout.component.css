@@ -2,8 +2,8 @@
 
 .card {
     background-color: whitesmoke;
-    margin-top: 100px;
-    margin-left: 30%;
+    margin-top: 80px;
+    margin-left: 35%;
 }
 
 .btn-primary {
@@ -12,13 +12,12 @@
 }
 
 #header{
-    background-color: lightskyblue;
-    color: black;
-}
-#body{
-    margin-left: 200px;
+    background-color: darkslategrey;
+    color: white;
 }
 
+
 .modal-header{
-    background-color: lightskyblue;
+    background-color: darkslategray;
+    color: white;
 }
