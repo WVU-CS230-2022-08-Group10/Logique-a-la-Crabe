@@ -1,52 +1,95 @@
 <body>
     <h1 class="title mt-5">NMOS/PMOS Transistors and Truth Tables</h1>
 
-    <div class="intro">
-        <h1>Introduction</h1>
-        <p>NMOS and PMOS transistors are .........</p>
-        <h3 class="mb-0">Ready to move on? Try the practice problems: </h3>
-        <button class="btn btn-primary mt-0 show-button" (click)="showPracticeProblems()">Practice</button>
+    <div class="lesson">
+        <div class="intro">
+            <h1>Introduction</h1>
+            <p>
+                To begin with, let's discuss what transistors are. Transistors are made from doped silicon, which is a
+                good conductor, that comes in two types:
+                n-type, which provides free negative charges, and p-type, which provides free positive charges. These
+                two types of silicon are what differentiate
+                PMOS transistors from NMOS transistors.
+            </p>
+            <p>
+                Figure 1 provides a good illustration of the two transistors. The parts marked with p+ or p-substrate are constructed with the p-type silicon,
+                while n+ and n-well represent the n-type silicon.
+            </p>
+            <p>
+                Just looking at the NMOS section, we see that it consists of two pieces of n-type connected by a gate. The two pieces are marked S and D representing
+                a source and a drain. The way this transistor works is that when the gate signal, G, is high, the gate allows a connection between the source and the drain.
+                When G is low, there is no connection, so electricity cannot pass between the two sections. Figure 2 better represents this connection.
+            </p>
+            <p>
+                PMOS transistors are similar to NMOS ones, but work the opposite way. Whenever the signal to G is high, the gate is open and doesn't allow a 
+                connection. G being low causes the gate to be connected and therefore allows electricity to pass through.
+            </p>
+            <p>
+                Moving on to truth tables, we're focusing on organizing the output of given logic gates based off of certain inputs. Figure 3 gives us an example
+                of what different truth tables would look like for different logic gates. If we look at just the AND gate, we can see that it has 2 inputs
+                and 1 output. This is represented in the truth table with 2 columns for the 2 inputs, marked A and B, and 1 column for the output, marked F. Due
+                to inputs being binary as either high or low, the number of rows in the table is 2^#-of-inputs. An AND gate has 2 inputs, so the table has 2^2 or 
+                4 rows.
+            </p>
+            <p>
+                Conventionally, the value for the inputs is written as increasing binary numbers. The tables in figure 3 represent this by starting with A=0 B=0 with
+                the next row being A=0 B=1, then A=1 B=0 and so on. The only requirement is that every possible input is shown in the table. The value in each row
+                of the output column is found by taking the inputs and performing the logic operation on it. Therefore, if we're given an OR gate with A=0 and B=1,
+                the output in the row would be 1 because of the way the OR gate works. Truth tables get more complicated the more gates/ inputs that are added to it.
+            </p>
+            <h3 class="mb-0">Ready to move on? Try the practice problems: </h3>
+            <button class="btn btn-primary mt-0 show-button" (click)="showPracticeProblems()">Practice</button>
+        </div>
+        <div *ngIf="showPractice">
+            <h1 class="mt-4">Practice Problems</h1>
+            <ul>
+                <li id="question"></li>
+                <li>
+                    <ol>
+                        <li><button class="btn btn-outline-info" id="1"
+                                (click)="changePracticeQuestion('1')">Answer1</button></li>
+                        <li><button class="btn btn-outline-info" id="2"
+                                (click)="changePracticeQuestion('2')">Answer2</button></li>
+                        <li><button class="btn btn-outline-info" id="3"
+                                (click)="changePracticeQuestion('3')">Answer3</button></li>
+                        <li><button class="btn btn-outline-info" id="4"
+                                (click)="changePracticeQuestion('4')">Answer4</button></li>
+                    </ol>
+                </li>
+                <h3 *ngIf="isIncorrect">Incorrect: Try again!</h3>
+                <h3 *ngIf="isCorrect">That's correct! Next problem...</h3>
+            </ul>
+            <h3>Feel prepared? Try the quiz problems below to complete the module</h3>
+            <button class="btn btn-primary mt-0 show-button" (click)="showQuizProblems()">Quiz</button>
+        </div>
+        <div *ngIf="showQuiz">
+            <h1 class="mt-4">Quiz Questions</h1>
+            <ul>
+                <li id="question">Question 1:</li>
+                <li>
+                    <ol>
+                        <li><button class="btn btn-outline-info" id="1"
+                                (click)="changeQuizQuestion('1')">Answer1</button></li>
+                        <li><button class="btn btn-outline-info" id="2"
+                                (click)="changeQuizQuestion('2')">Answer2</button></li>
+                        <li><button class="btn btn-outline-info" id="3"
+                                (click)="changeQuizQuestion('3')">Answer3</button></li>
+                        <li><button class="btn btn-outline-info" id="4"
+                                (click)="changeQuizQuestion('4')">Answer4</button></li>
+                    </ol>
+                </li>
+                <h3 *ngIf="isIncorrect">Incorrect: Try again!</h3>
+                <h3 *ngIf="isCorrect">That's correct! Next problem...</h3>
+            </ul>
+        </div>
     </div>
-    <div *ngIf="showPractice">
-        <h1 class="mt-4">Practice Problems</h1>
-        <ul>
-            <li id="question">Question 1:</li>
-            <li>
-                <ol>
-                    <li><button class="btn btn-outline-info" id="1"
-                            (click)="changePracticeQuestion('1')">Answer1</button></li>
-                    <li><button class="btn btn-outline-info" id="2"
-                            (click)="changePracticeQuestion('2')">Answer2</button></li>
-                    <li><button class="btn btn-outline-info" id="3"
-                            (click)="changePracticeQuestion('3')">Answer3</button></li>
-                    <li><button class="btn btn-outline-info" id="4"
-                            (click)="changePracticeQuestion('4')">Answer4</button></li>
-                </ol>
-            </li>
-            <h3 *ngIf="isIncorrect">Incorrect: Try again!</h3>
-            <h3 *ngIf="isCorrect">That's correct! Next problem...</h3>
-        </ul>
-        <h3>Feel prepared? Try the quiz problems below to complete the module</h3>
-        <button class="btn btn-primary mt-0 show-button" (click)="showQuizProblems()">Quiz</button>
-    </div>
-    <div *ngIf="showQuiz">
-        <h1 class="mt-4">Quiz Questions</h1>
-        <ul>
-            <li id="question">Question 1:</li>
-            <li>
-                <ol>
-                    <li><button class="btn btn-outline-info" id="1"
-                            (click)="changeQuizQuestion('1')">Answer1</button></li>
-                    <li><button class="btn btn-outline-info" id="2"
-                            (click)="changeQuizQuestion('2')">Answer2</button></li>
-                    <li><button class="btn btn-outline-info" id="3"
-                            (click)="changeQuizQuestion('3')">Answer3</button></li>
-                    <li><button class="btn btn-outline-info" id="4"
-                            (click)="changeQuizQuestion('4')">Answer4</button></li>
-                </ol>
-            </li>
-            <h3 *ngIf="isIncorrect">Incorrect: Try again!</h3>
-            <h3 *ngIf="isCorrect">That's correct! Next problem...</h3>
-        </ul>
+
+    <div class="figures">
+        <h3 class="figure-title">Figure 1</h3>
+        <img src="/assets/transistor-module/examples/transistors.png" />
+        <h3 class="figure-title">Figure 2</h3>
+        <img src="/assets/transistor-module/examples/576px-MOSFET_flow.png" />
+        <h3 class="figure-title">Figure 3</h3>
+        <img src="/assets/transistor-module/examples/Logic-Gates-and-Truth-tables.png" />
     </div>
 </body>

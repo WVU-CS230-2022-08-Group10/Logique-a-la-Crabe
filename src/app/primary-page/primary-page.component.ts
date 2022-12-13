@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { gates } from './menu-gates/gates-list';
 import { GatesModel } from './menu-gates/gates.model';
 
-
 @Component({
   selector: 'app-primary-page',
   templateUrl: './primary-page.component.html',

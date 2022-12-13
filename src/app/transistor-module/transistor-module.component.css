@@ -6,10 +6,28 @@ ul{
     list-style-type: none;
 }
 .show-button{
-    width: 7%;
+    width: 14%;
     height: 5%;
 }
 ol li{
     display: inline;
     margin-right: 8px;
+}
+.lesson{
+    width: 40%;
+    margin-left: 2%;
+    display: inline-block;
+}
+.figures{
+    margin-right: 2%;
+    display: inline;
+    float: right;
+}
+.figure-title{
+    text-align: center;
+}
+img{
+    margin-left: 13%;
+    height: 75%;
+    width: 75%;
 }
