@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<body (load)="setCanvas()">
-    <h1 class="mt-5 header">Circuit Builder</h1>
+<body (load)=" setCanvas()">
+    <div class="canvas-heading">
+        <h1 style="font-weight:bold;">Welcome to the Circuit Canvas</h1>
+        <h2>Drag and drop a gate from the menu on the left to start creating a circuit!</h2>
+    </div>
 
     <div class="gate-list">
-        <h3 class="mb-3">Gates</h3>
+        <h2 class="menu-title">Gates List</h2>
 
         <div class="mb-2 gates" *ngFor="let x of gates" draggable="false" id="list">
             <app-gates type={{x.type}} svg={{x.svg}} inputs={{x.inputs}} id={{x.id}} viewbox={{x.viewbox}}></app-gates>
@@ -14,11 +17,10 @@
 
     </div>
 
-
     <div class="board" id="canvas">
 
-
     </div>
+    <div class="d-flex justify-content-end" style="position:static;"><img src="/assets/crab_left_claw_up.png"></div>
 </body>
 
 </html>
