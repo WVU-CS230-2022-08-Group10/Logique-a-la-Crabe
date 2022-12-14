@@ -8,36 +8,46 @@
                 or raising.
                 Noise margins are the area where signals can be pushed through a circuit safely.
             </p>
-            <div class="figures">
-                <img src="/assets/noise.png" />
+            <div class="row justify-content-md-left">
+                <div class="row">
+                    
+                    <div class="col">
+                        <p>
+                            First, we need to define some variables
+                        </p>
+                        <p>
+                            VDD is the high signal with a binary value of 1
+                        </p>
+                        <p>
+                            GND (ground) is the low signal with a binary value of 0
+                        </p>
+                        <p>
+                            VOH is voltage output high and VOL is voltage output low
+                        </p>
+                        <p>
+                            VIH is voltage input high and VIL is voltage input low
+                        </p>
+                        <p>
+                            NMH is noise margin high and NML is noise margin low
+                        </p>
+                        <p>
+                            To calculate the the noise margin high value use the formula... NMH = VOH - VIH
+                        </p>
+                        <p>
+                            To calculate the noise margin low value use the formula... NML = VIL - VOL
+                        </p>
+                        <p>
+                            Both NMH and NML need to be postive for a gate to drive another gate
+                        </p>
+                    </div>
+                    <div class="col justify-content-md-right">
+                        <div class="figures">
+                            <img src="/assets/noise.png" />
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>
-                First, we need to define some variables
-            </p>
-            <p>
-                VDD is the high signal with a binary value of 1
-            </p>
-            <p>
-                GND (ground) is the low signal with a binary value of 0
-            </p>
-            <p>
-                VOH is voltage output high and VOL is voltage output low
-            </p>
-            <p>
-                VIH is voltage input high and VIL is voltage input low
-            </p>
-            <p>
-                NMH is noise margin high and NML is noise margin low
-            </p>
-            <p>
-                To calculate the the noies margin high value use the formula... NMH = VOH - VIH
-            </p>
-            <p>
-                To calculate the noise margin low value use the formula... NML = VIL - VOL
-            </p>
-            <p>
-                Both NMH and NML need to be postive for a gate to drive another gate
-            </p>
+
             <p>
             <h3 class="mb-0">Ready to move on? Try the practice problems: </h3>
             <button class="btn btn-primary mt-0 show-button" (click)="showPracticeProblems()">Practice</button>
