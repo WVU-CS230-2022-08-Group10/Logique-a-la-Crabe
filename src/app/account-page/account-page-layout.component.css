@@ -1,9 +1,10 @@
-
-
 .card {
     background-color: whitesmoke;
-    margin-top: 80px;
-    margin-left: 35%;
+    width: 25rem;
+    margin-top: .5in;
+    margin-right: .5in;
+    margin-left: .5in;
+
 }
 
 .btn-primary {
@@ -11,13 +12,14 @@
     border-color: darkslategrey;
 }
 
-#header{
+#header {
     background-color: darkslategrey;
     color: white;
+    text-align: center;
 }
 
 
-.modal-header{
+.modal-header {
     background-color: darkslategray;
     color: white;
 }

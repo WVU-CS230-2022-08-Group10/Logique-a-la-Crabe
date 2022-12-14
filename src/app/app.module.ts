@@ -23,6 +23,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { ModuleListPageComponent } from './module-list-page/module-list-page.component';
 import { TransistorModuleComponent } from './transistor-module/transistor-module.component';
 import { BinaryModuleComponent } from './binary-module/binary-module.component';
+import { LogicGatesPracticeComponent } from "./logic-gates-module/practice-layout/practice.component";
 
 @NgModule({
   declarations: [
@@ -36,8 +37,11 @@ import { BinaryModuleComponent } from './binary-module/binary-module.component';
     AccountPageLayoutComponent,
     ModuleListPageComponent,
     TransistorModuleComponent,
-    BinaryModuleComponent
+    BinaryModuleComponent,
+    LogicGatesPracticeComponent
   ],
+  providers: [],
+  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -47,8 +51,6 @@ import { BinaryModuleComponent } from './binary-module/binary-module.component';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     CommonModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  ]
 })
 export class AppModule { }

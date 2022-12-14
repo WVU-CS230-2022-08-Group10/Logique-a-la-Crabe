@@ -5,16 +5,14 @@ import { ModuleListPageComponent } from './module-list-page/module-list-page.com
 import { PrimaryPageComponent } from './primary-page/primary-page.component';
 import { LogicGatesLayoutComponent } from './logic-gates-module/logic-gates/logic-gates-layout/logic-gates-layout.component';
 import { TransistorModuleComponent } from './transistor-module/transistor-module.component';
-import { LogicGatesPracticeComponent } from './logic-gates-module/practice-layout/practice.component';
 import { BinaryModuleComponent } from './binary-module/binary-module.component';
 import { NoiseModuleComponent } from './noise-margins-module/noise-margins.component';
 
 const routes: Routes = [
   { path: 'logic-gates', component: LogicGatesLayoutComponent },
-  { path: 'logic-gates/practice', component: LogicGatesPracticeComponent },
-  { path: '', component: PrimaryPageComponent },
+  { path: 'canvas', component: PrimaryPageComponent },
   { path: 'account', component: AccountPageLayoutComponent },
-  { path: 'Modules', component: ModuleListPageComponent },
+  { path: '', component: ModuleListPageComponent },
   { path: 'transistors', component: TransistorModuleComponent },
   { path: 'binary-numbers', component: BinaryModuleComponent },
   { path: 'noise-margins', component: NoiseModuleComponent }

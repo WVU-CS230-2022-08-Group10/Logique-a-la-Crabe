@@ -9,17 +9,27 @@ import { gate_info_model } from './gate-info-model';
 })
 export class LogicGatesLayoutComponent implements OnInit {
   gate_info: gate_info_model[] = [];
+  showPractice: boolean;
+  count: number;
 
   constructor() {
     for (var item of gate_info_card) {
       console.log(item);
       this.gate_info.push(item);
     }
+    this.showPractice = false;
+    this.count = 0;
   }
   ngOnInit(): void {
   }
 
   showPracticeProblems() {
+    this.showPractice = true;
+    this.count++;
+    if (this.count > 1) {
+      this.showPractice = false;
+      this.count = 0;
+    }
 
   }
 

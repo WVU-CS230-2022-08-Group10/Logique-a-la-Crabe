@@ -24,6 +24,8 @@
         <h2>When you're ready for some practice click the button below!</h2>
         <button class="btn btn-primary mt-0" (click)="showPracticeProblems()">Show Practice Problems</button>
     </div>
-    <div #ngIf(showPracticeProblems)></div>
+    <div *ngIf="showPractice">
+        <app-practice></app-practice>
+    </div>
     <app-main-footer></app-main-footer>
 </div>

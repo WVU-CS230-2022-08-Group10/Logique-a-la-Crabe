@@ -1,29 +1,30 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand text-white" href="#">Logica</a>
+    <a class="navbar-brand text-white" routerLink="/">Logique-a-la-Crabe</a>
+    <!---Menu toggle when screen size shrinks-->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">☰</button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!--Align Content-->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!--Routes to each page component-->
         <li class="nav-item">
-          <a class="nav-link active text-white" aria-current="page" href="#">Circuit Canvas</a>
-        </li>
-        <li>
-          <a class="nav-link text-white" routerLink="/binary-numbers">Binary Numbers Module</a>
+          <a class="nav-link" routerLink="/canvas">Circuit Canvas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" routerLink="/logic-gates">Logic Gates Module</a>
+          <a class="nav-link" routerLink="/binary-numbers">Binary Numbers Module</a>
         </li>
-        <li>
-          <a class="nav-link text-white" routerLink="/noise-margins">Noise Margins Module</a>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/logic-gates">Logic Gates Module</a>
         </li>
-        <li>
-          <a class="nav-link text-white" routerLink="/transistors">Transistors Module</a>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/noise-margins">Noise Margins Module</a>
         </li>
-        <li>
-          <a class="nav-link text-white" href="account" rounterLink="/account">Account</a>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/transistors">Transistors Module</a>
+        </li>
+        <li class="nav-item-left">
+          <a class="nav-link" routerLink="/account">Account</a>
         </li>
       </ul>
     </div>

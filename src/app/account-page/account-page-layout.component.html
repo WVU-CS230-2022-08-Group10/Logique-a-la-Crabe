@@ -1,12 +1,12 @@
-<div class="layout container-fluid">
+<div class="d-flex flex-row flex-wrap justify-content-center">
 
-    <div class="card" style="width: 25rem;">
+    <div class="card">
 
         <div class="card-header" id="header">
             <h2>Sign up and start saving your progress</h2>
         </div>
 
-       <div class="card-body">
+        <div class="card-body">
             <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
 
                 <div class="input-group mb-3">
@@ -17,14 +17,14 @@
 
                 <div class="input-group mb-3">
                     <span class="input-group-text">Password</span>
-                    <input type="password" class="form-control" placeholder="Min 5 characters" ngModel name="password"
-                        required password minlength="5">
+                    <input type="password" class="form-control" placeholder="min 8 characters" ngModel name="password"
+                        required password minlength="8">
                 </div>
 
                 <div class="input-group mb-3">
                     <span class="input-group-text">Confirm Password</span>
-                    <input type="password" class="form-control" placeholder="Min 5 characters" ngModel
-                        name="passwordConfirm" required password minlength="5">
+                    <input type="password" class="form-control" placeholder="must match password" ngModel
+                        name="passwordConfirm" required password minlength="8">
                 </div>
 
                 <button class="btn btn-dark m1" type="submit" [disabled]="!authForm.valid"
@@ -34,9 +34,9 @@
             </form>
 
         </div>
-   </div>
+    </div>
 
-    <div class="card" style="width: 25rem;">
+    <div class="card">
 
         <div class="card-header" id="header">
             <h2>Login to an existing account</h2>
@@ -53,8 +53,8 @@
 
                 <div class="input-group mb-3">
                     <span class="input-group-text">Password</span>
-                    <input type="password" class="form-control" placeholder="Min 5 characters" ngModel name="password"
-                        required password minlength="5">
+                    <input type="password" class="form-control" placeholder="password" ngModel name="password" required
+                        password minlength="8">
                 </div>
 
                 <button class="btn btn-dark m1" type="submit" [disabled]="!authForm.valid"
@@ -96,4 +96,3 @@
         </div>
     </div>
 </div>
-

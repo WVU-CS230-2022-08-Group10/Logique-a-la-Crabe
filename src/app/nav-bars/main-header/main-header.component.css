@@ -1,8 +1,46 @@
-.navbar{
-    background-color:darkslategrey;
-    
+.navbar {
+    background-color: darkslategrey;
 }
-.navbar-brand{
-    font-weight:bold;
-    text-decoration-line: underline;
+
+.navbar-brand {
+    font-weight: bold;
+    margin-left: .5in;
+    margin-right: .5in;
+
+}
+
+.navbar-toggler {
+    color: white;
+    border: none;
+    margin-right: .5in;
+}
+
+.nav-item-left {
+    font-size: medium;
+    margin-right: .5in;
+}
+
+.nav-item {
+    margin-right: .2in;
+    font-size: medium;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    border-bottom: 0.2vw solid transparent;
+}
+
+.navbar-nav .nav-link:hover {
+    color: white;
+    border-bottom: 0.2vw solid white;
+}
+
+.navbar-brand {
+    color: white;
+    border-bottom: 0.2vw solid transparent;
+}
+
+.navbar-brand:hover {
+    color: white;
+    border-bottom: 0.2vw solid white;
 }
