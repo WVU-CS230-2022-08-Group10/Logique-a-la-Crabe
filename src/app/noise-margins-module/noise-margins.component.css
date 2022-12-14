@@ -1,0 +1,26 @@
+.intro {
+    margin-top: .5in;
+    margin-left: .5in;
+    margin-right: .5in;
+}
+
+.practice {
+    margin-top: .5in;
+    margin-left: .5in;
+    margin-right: .5in;
+    margin-bottom: .5in;
+}
+
+.btn-primary {
+    background-color: darkslategrey;
+    border-color: darkslategrey;
+}
+
+a {
+    color: white;
+}
+
+p {
+    font-size: large;
+    line-height: 2;
+}

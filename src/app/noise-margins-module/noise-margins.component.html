@@ -1,52 +1,60 @@
 <body>
-    <h1 class="title mt-5">Noise Margins</h1>
 
-    <div class="intro">
-        <h1>Introduction</h1>
-        <p>Noise margins are the range of values that input and output levels can be to safely push currents</p>
-        <h3 class="mb-0">Ready to move on? Try the practice problems: </h3>
-        <button class="btn btn-primary mt-0 show-button" (click)="showPracticeProblems()">Practice</button>
+    <div class="lesson">
+        <div class="intro">
+            <h1>Noise Margins</h1>
+            <p>
+                text
+            </p>
+            <p>
+                placeholder
+            </p>
+            <p>
+            <h3 class="mb-0">Ready to move on? Try the practice problems: </h3>
+            <button class="btn btn-primary mt-0 show-button" (click)="showPracticeProblems()">Practice</button>
+        </div>
+        <div *ngIf="showPractice">
+            <h1 class="mt-4">Practice Problems</h1>
+            <ul>
+                <li id="question"></li>
+                <li>
+                    <ol>
+                        <li><button class="btn btn-outline-info" id="1"
+                                (click)="changePracticeQuestion('1')">Answer1</button></li>
+                        <li><button class="btn btn-outline-info" id="2"
+                                (click)="changePracticeQuestion('2')">Answer2</button></li>
+                        <li><button class="btn btn-outline-info" id="3"
+                                (click)="changePracticeQuestion('3')">Answer3</button></li>
+                        <li><button class="btn btn-outline-info" id="4"
+                                (click)="changePracticeQuestion('4')">Answer4</button></li>
+                    </ol>
+                </li>
+                <h3 *ngIf="isIncorrect">Incorrect: Try again!</h3>
+                <h3 *ngIf="isCorrect">That's correct! Next problem...</h3>
+            </ul>
+            <h3>Feel prepared? Try the quiz problems below to complete the module</h3>
+            <button class="btn btn-primary mt-0 show-button" (click)="showQuizProblems()">Quiz</button>
+        </div>
+        <div *ngIf="showQuiz">
+            <h1 class="mt-4">Quiz Questions</h1>
+            <ul>
+                <li id="question">Question 1:</li>
+                <li>
+                    <ol>
+                        <li><button class="btn btn-outline-info" id="1"
+                                (click)="changeQuizQuestion('1')">Answer1</button></li>
+                        <li><button class="btn btn-outline-info" id="2"
+                                (click)="changeQuizQuestion('2')">Answer2</button></li>
+                        <li><button class="btn btn-outline-info" id="3"
+                                (click)="changeQuizQuestion('3')">Answer3</button></li>
+                        <li><button class="btn btn-outline-info" id="4"
+                                (click)="changeQuizQuestion('4')">Answer4</button></li>
+                    </ol>
+                </li>
+                <h3 *ngIf="isIncorrect">Incorrect: Try again!</h3>
+                <h3 *ngIf="isCorrect">That's correct! Next problem...</h3>
+            </ul>
+        </div>
     </div>
-    <div *ngIf="showPractice">
-        <h1 class="mt-4">Practice Problems</h1>
-        <ul>
-            <li id="question">Question 1:</li>
-            <li>
-                <ol>
-                    <li><button class="btn btn-outline-info" id="1"
-                            (click)="changePracticeQuestion('1')">Answer1</button></li>
-                    <li><button class="btn btn-outline-info" id="2"
-                            (click)="changePracticeQuestion('2')">Answer2</button></li>
-                    <li><button class="btn btn-outline-info" id="3"
-                            (click)="changePracticeQuestion('3')">Answer3</button></li>
-                    <li><button class="btn btn-outline-info" id="4"
-                            (click)="changePracticeQuestion('4')">Answer4</button></li>
-                </ol>
-            </li>
-            <h3 *ngIf="isIncorrect">Incorrect: Try again!</h3>
-            <h3 *ngIf="isCorrect">That's correct! Next problem...</h3>
-        </ul>
-        <h3>Feel prepared? Try the quiz problems below to complete the module</h3>
-        <button class="btn btn-primary mt-0 show-button" (click)="showQuizProblems()">Quiz</button>
-    </div>
-    <div *ngIf="showQuiz">
-        <h1 class="mt-4">Quiz Questions</h1>
-        <ul>
-            <li id="question">Question 1:</li>
-            <li>
-                <ol>
-                    <li><button class="btn btn-outline-info" id="1"
-                            (click)="changeQuizQuestion('1')">Answer1</button></li>
-                    <li><button class="btn btn-outline-info" id="2"
-                            (click)="changeQuizQuestion('2')">Answer2</button></li>
-                    <li><button class="btn btn-outline-info" id="3"
-                            (click)="changeQuizQuestion('3')">Answer3</button></li>
-                    <li><button class="btn btn-outline-info" id="4"
-                            (click)="changeQuizQuestion('4')">Answer4</button></li>
-                </ol>
-            </li>
-            <h3 *ngIf="isIncorrect">Incorrect: Try again!</h3>
-            <h3 *ngIf="isCorrect">That's correct! Next problem...</h3>
-        </ul>
-    </div>
+
 </body>
