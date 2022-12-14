@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NoiseModuleComponent } from './noise-margins.component';
 
-describe('TransistorModuleComponent', () => {
+describe('NoiseModuleComponent', () => {
   let component: NoiseModuleComponent;
   let fixture: ComponentFixture<NoiseModuleComponent>;
 
