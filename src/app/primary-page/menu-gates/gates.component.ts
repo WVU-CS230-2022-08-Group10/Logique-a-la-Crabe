@@ -1,4 +1,4 @@
-import { Component, Input, NgModule, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { dragDrop } from './dragdrop';
 
 @Component({
@@ -25,4 +25,6 @@ export class GatesComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
 } //End of class

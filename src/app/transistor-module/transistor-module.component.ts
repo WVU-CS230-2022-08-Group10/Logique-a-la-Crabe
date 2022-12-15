@@ -39,6 +39,7 @@ export class TransistorModuleComponent implements OnInit {
     this.showPractice = true;
     this.showQuiz = false;
     this.setFirstQuestion();
+    this.currentQuestion = 1;
   }
 
   // Displays the quiz questions after the button is clicked
@@ -47,6 +48,7 @@ export class TransistorModuleComponent implements OnInit {
     this.showQuiz = true;
     this.setFirstQuizQuestion();
     this.correctAnswer = this.getRandomInt(3);
+    this.currentQuestion = 1;
   }
 
   // Changes the displayed question to the next one if the answer is correct
