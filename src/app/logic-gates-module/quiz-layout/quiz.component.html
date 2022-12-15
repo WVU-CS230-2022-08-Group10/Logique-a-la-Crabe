@@ -1,0 +1,64 @@
+<div class="layout container-fluid">
+    <div class="quiz">
+        <h2>Question 1:<h3>Could you create an AND gate by using only NAND gates?</h3>
+        </h2>
+        <div class="answers">
+            <ul><button class="btn btn-secondary" (click)="isCorrect('')" [disabled]="countQ >-1">Yes, it would take
+                    4</button><button class="btn btn-secondary" (click)="isCorrect('')" [disabled]="countQ >-1">Yes, it
+                    would take 3</button><button class="btn btn-secondary" (click)="isCorrect('correct')"
+                    [disabled]="countQ >-1">Yes, it
+                    would take 2</button><button class="btn btn-secondary" (click)="isCorrect('')"
+                    [disabled]="countQ >-1">No, it's not
+                    possible</button></ul>
+            <div *ngIf="statusC && countQ == 0">That is correct</div>
+            <div *ngIf="statusW && countQ == -1">That is wrong, rethink the question</div>
+        </div>
+        <h2>Question 2:<h3>Could you create an AND gate by using only NOR gates?</h3>
+        </h2>
+        <div class="answers">
+            <ul><button class="btn btn-secondary" (click)="isCorrect('')" [disabled]="countQ >0">Yes, it would take
+                    4</button><button class="btn btn-secondary" (click)="isCorrect('correct')"
+                    [disabled]="countQ >0">Yes, it
+                    would take 3</button><button class="btn btn-secondary" (click)="isCorrect('')"
+                    [disabled]="countQ >0">Yes, it
+                    would take 2</button><button class="btn btn-secondary" (click)="isCorrect('')"
+                    [disabled]="countQ >0">No, it's not
+                    possible</button></ul>
+            <div *ngIf="statusC && countQ == 1">That is correct</div>
+            <div *ngIf="statusW && countQ == 0">That is wrong, rethink the question</div>
+
+        </div>
+        <h2>Question 3:<h3>Examine the image below. If A is true and B is true, what will the output Q be?</h3>
+        </h2>
+        <img src="/assets/logic-problems/CPT-logic-gate_ex4.svg">
+        <div class="answers">
+            <ul><button class="btn btn-secondary" (click)="isCorrect('')" [disabled]="countQ >1">True</button><button
+                    class="btn btn-secondary" (click)="isCorrect('correct')" [disabled]="countQ >1">False</button></ul>
+            <div *ngIf="statusC && countQ == 2">That is correct</div>
+            <div *ngIf="statusW && countQ == 1">That is wrong, rethink the question</div>
+        </div>
+        <h2>Question 4:<h3>Examine the image below. If A is false and B is true and C is true, what will the output
+                Q be?</h3>
+        </h2>
+        <img src="/assets/logic-problems/CPT-logic-gate_ex5.svg">
+        <div class="answers">
+            <ul><button class="btn btn-secondary" (click)="isCorrect('correct')"
+                    [disabled]="countQ >2">True</button><button class="btn btn-secondary" (click)="isCorrect('')"
+                    [disabled]="countQ >2">False</button></ul>
+            <div *ngIf="statusC && countQ == 3">That is correct</div>
+            <div *ngIf="statusW && countQ == 2">That is wrong, rethink the question</div>
+        </div>
+
+        <h2>Question 5:<h3>Pretend the XOR gate below is actually a XNOR gate. If A is false and B is true and C is
+                true, what will the output Q be?</h3>
+        </h2>
+        <img src="/assets/logic-problems/CPT-logic-gate_ex5.svg">
+        <div class="answers">
+            <ul><button class="btn btn-secondary" (click)="isCorrect('')" [disabled]="countQ >3">True</button><button
+                    class="btn btn-secondary" (click)="isCorrect('correct')" [disabled]="countQ >3">False</button></ul>
+            <div *ngIf="statusC && countQ == 4">That is correct</div>
+            <div *ngIf="statusW && countQ == 3">That is wrong, rethink the question</div>
+        </div>
+        <div *ngIf="countQ == 4">Great Job!</div>
+    </div>
+</div>

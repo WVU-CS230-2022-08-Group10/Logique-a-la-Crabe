@@ -26,13 +26,13 @@ export const gate_info_card = [
     {
         gate_image: "/assets/logic-gates/NOR_gate.svg",
         gate_name: "NOR",
-        gate_description: "The NOR gate is the reverse of the OR gate. The output is true when both inputs are false. All other other input combinations are true.",
+        gate_description: "The NOR gate is the reverse of the OR gate. The output is true when both inputs are false. All other other input combinations are false.",
         truth_table: "/assets/logic-truth/NOR_table.png"
     },
     {
         gate_image: "/assets/logic-gates/Buffer_gate.svg",
         gate_name: "BUF",
-        gate_description: "The BUF gate takes one input and repeats it as the output. It's purpose is to boost a weak signal son it can travel further.",
+        gate_description: "The BUF gate takes one input and repeats it as the output. It's purpose is to boost a weak signal so it can travel further.",
         truth_table: "/assets/logic-truth/BUF_table.png"
     },
     {

@@ -1,17 +1,15 @@
-import { identifierName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
-  selector: 'app-practice',
-  templateUrl: './practice.component.html',
-  styleUrls: ['./practice.component.css']
+  selector: 'app-quiz',
+  templateUrl: './quiz.component.html',
+  styleUrls: ['./quiz.component.css']
 })
-export class LogicGatesPracticeComponent implements OnInit {
+export class LogicGatesQuizComponent implements OnInit {
   //Correct and Wrong flags for answers
   statusC: boolean;
   statusW: boolean;
-  //Keeps track of which question # user is on.
+  //Keeps track of # of questions answered correctly
   countQ: number;
   constructor() {
     this.statusC = false;
@@ -31,7 +29,7 @@ export class LogicGatesPracticeComponent implements OnInit {
       //Indicate to user they were correct by setting flag
       this.statusC = true;
       this.statusW = false;
-      //Increase count to move to the next set of ngif statments
+      //Increase count to control the ngIf statments
       this.countQ++;
     }
     else {
@@ -40,8 +38,6 @@ export class LogicGatesPracticeComponent implements OnInit {
       //Indicate to user they were wrong by setting flag
       this.statusW = true;
       this.statusC = false;
-      //Stay on current ngif statement
     }
   }
-
 }

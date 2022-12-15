@@ -1,37 +1,84 @@
 <div class="layout container-fluid">
+    <!--Each button calls the isCorrect method, which controls the status variables and the counter-->
     <div class="practice">
-        <h1>Logic Gate Practice Problems</h1>
-        <h2>Question 1: </h2>
-        <h3></h3>
-        <div>
-
+        <h2>Question 1:<h3>True or False: You could create an XOR by using a NAND gate and an OR gate.</h3>
+        </h2>
+        <!--Disable the button after the counter increases, meaning the question was answered correctly-->
+        <div class="answers">
+            <ul><button class="btn btn-secondary" (click)="isCorrect('')" [disabled]="countQ >-1">True</button><button
+                    class="btn btn-secondary" (click)="isCorrect('correct')" [disabled]="countQ >-1">False</button>
+            </ul>
+            <!--If the question was answered correctly and this was the next question to be answered-->
+            <div *ngIf="statusC && countQ == 0">That is correct</div>
+            <!--If the question was answered incorrectly and this is the next question to be answered-->
+            <div *ngIf="statusW && countQ == -1">That is wrong, rethink the question</div>
         </div>
-        <h2>Question 2: </h2>
-        <h3></h3>
-        <div>
-
-        </div>
-        <h2>Question 3: </h2>
-        <h3>Examine the image below. If A is 1, B is 0, and C is 0, what will the output Q be?</h3>
-        <img src="/assets/logic-problems/CPT-logic-gate_ex1.svg">
-        <div>
-
-        </div>
-        <h2>Question 4: </h2>
-        <h3></h3>
+        <h2>Question 2:<h3>Examine the image below. Which gate type accomplishes the same logic?</h3>
+        </h2>
         <img src="/assets/logic-problems/CPT-logic-gate_ex2.svg">
-        <div>
-
+        <!--Disable the button after the counter increases, meaning the question was answered correctly-->
+        <div class="answers">
+            <ul><button class="btn btn-secondary" (click)="isCorrect('')" [disabled]="countQ > 0">AND</button><button
+                    class="btn btn-secondary" (click)="isCorrect('')" [disabled]="countQ >0">XNOR</button><button
+                    class="btn btn-secondary" (click)="isCorrect('correct')" [disabled]="countQ > 0">NOR</button><button
+                    class="btn btn-secondary" (click)="isCorrect('')" [disabled]="countQ > 0">XOR</button></ul>
+            <!--If the question was answered correctly and this is the next question to be answered-->
+            <div *ngIf="statusC && countQ == 1">That is correct</div>
+            <!--If the question was answered incorrectly and this is the next question to be answered-->
+            <div *ngIf="statusW && countQ == 0">That is wrong, rethink the question</div>
         </div>
-        <h2>Question 5: </h2>
-        <h3></h3>
+        <h2>Question 3:<h3>Is it possible for a NOR gate function exactly like a NOT gate?</h3>
+        </h2>
+        <div class="answers">
+            <!--Disable the button after the counter increases, meaning the question was answered correctly-->
+            <ul><button class="btn btn-secondary" (click)="isCorrect('correct')" [disabled]="countQ > 1">Yes, by making
+                    one input A and the
+                    other input
+                    0</button><button class="btn btn-secondary" (click)="isCorrect('correct')"
+                    [disabled]="countQ > 1">Yes, by making both
+                    inputs
+                    A</button><button class="btn btn-secondary" (click)="isCorrect('')" [disabled]="countQ > 1">Yes, by
+                    making one input A and
+                    the
+                    other input 1</button><button class="btn btn-secondary" (click)="isCorrect('')"
+                    [disabled]="countQ > 1">No, a NOR gate
+                    cannot
+                    function as a NOT gate</button>
+            </ul>
+            <!--If the question was answered correctly and this is the next question to be answered-->
+            <div *ngIf="statusC && countQ == 2">That is correct</div>
+            <!--If the question was answered incorrectly and this is the next question to be answered-->
+            <div *ngIf="statusW && countQ == 1">That is wrong, rethink the question</div>
+        </div>
+        <h2>Question 4:<h3>Examine the image below. If A is true, B is false, and C is true, what will the output Q be?
+            </h3>
+        </h2>
+        <img src="/assets/logic-problems/CPT-logic-gate_ex1.svg">
+        <!--Disable the button after the counter increases, meaning the question was answered correctly-->
+        <div class="answers">
+            <ul><button class="btn btn-secondary" (click)="isCorrect('correct')"
+                    [disabled]="countQ > 2">True</button><button class="btn btn-secondary" (click)="isCorrect('')"
+                    [disabled]="countQ > 2">False</button></ul>
+            <!--If the question was answered correctly and this is the next question to be answered-->
+            <div *ngIf="statusC && countQ == 3">That is correct</div>
+            <!--If the question was answered incorrectly and this is the next question to be answered-->
+            <div *ngIf="statusW && countQ == 2">That is wrong, rethink the question</div>
+        </div>
+
+        <h2>Question 5:<h3>Examine the image below. If A is false and B is true, what will the output Q be?</h3>
+        </h2>
         <img src="/assets/logic-problems/CPT-logic-gate_ex3.svg">
-        <div>
-
+        <!--Disable the button after the counter increases, meaning the question was answered correctly-->
+        <div class="answers">
+            <ul><button class="btn btn-secondary" (click)="isCorrect('correct')"
+                    [disabled]="countQ > 3">True</button><button class="btn btn-secondary" (click)="isCorrect('')"
+                    [disabled]="countQ > 3">False</button></ul>
+            <!--If the question was answered correctly and this is the next question to be answered-->
+            <div *ngIf="statusC && countQ == 4">That is correct</div>
+            <!--If the question was answered incorrectly and this is the next question to be answered-->
+            <div *ngIf="statusW && countQ == 3">That is wrong, rethink the question</div>
         </div>
-    </div>
-    <div class="quiz">
-        <h2>When you're ready for a challenge click the button below!</h2>
-        <button class="btn btn-primary mt-0">Go for the Quiz</button>
+        <!--Count reaches 4 when all questions have been answered, so congratulate user-->
+        <div *ngIf="countQ == 4">Great Job!</div>
     </div>
 </div>

@@ -8,7 +8,6 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainHeaderComponent } from './nav-bars/main-header/main-header.component';
-import { MainFooterComponent } from './nav-bars/main-footer/main-footer.component';
 import { GateInfoCardComponent } from './logic-gates-module/logic-gates/gate-info-card/gate-info-card.component';
 import { LogicGatesLayoutComponent } from './logic-gates-module/logic-gates/logic-gates-layout/logic-gates-layout.component';
 import { PrimaryPageComponent } from './primary-page/primary-page.component';
@@ -25,12 +24,12 @@ import { TransistorModuleComponent } from './transistor-module/transistor-module
 import { BinaryModuleComponent } from './binary-module/binary-module.component';
 import { LogicGatesPracticeComponent } from "./logic-gates-module/practice-layout/practice.component";
 import { NoiseModuleComponent } from './noise-margins-module/noise-margins.component';
+import { LogicGatesQuizComponent } from "./logic-gates-module/quiz-layout/quiz.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     MainHeaderComponent,
-    MainFooterComponent,
     GateInfoCardComponent,
     LogicGatesLayoutComponent,
     PrimaryPageComponent,
@@ -40,6 +39,7 @@ import { NoiseModuleComponent } from './noise-margins-module/noise-margins.compo
     TransistorModuleComponent,
     BinaryModuleComponent,
     LogicGatesPracticeComponent,
+    LogicGatesQuizComponent,
     NoiseModuleComponent
   ],
   providers: [],

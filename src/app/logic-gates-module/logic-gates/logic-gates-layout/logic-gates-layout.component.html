@@ -1,4 +1,5 @@
 <div class="layout container-fluid">
+    <!--CSS Applied to introduction text for appearance-->
     <div class="intro">
         <h1>A Quick Introduction to Digital Logic Gates</h1>
         <p>Logic gates are the building blocks of any circuit design and are what allow computers to "think" and make
@@ -14,12 +15,15 @@
             other functions can be created such as the NAND gate which is a combination of the AND and NOT gate. The
             below cards provide more information of each of the different logic gates. Pay close attention the their
             truth tables as they will help you better understand what outputs to expect with any combination inputs.
-            There are also linked examples that demonstrate how the logic gate works with other gates in a circuit. </p>
+        </p>
     </div>
+    <!--class allows for cards to adjust positioning with screen size-->
     <div class="d-flex flex-row flex-wrap justify-content-around">
+        <!--The component containing the layout of the gate cards is called and loaded with information for the gate-model-->
         <app-gate-info-card *ngFor="let text of gate_info" img={{text.gate_image}} title={{text.gate_name}}
             text={{text.gate_description}} table={{text.truth_table}}>Loading...</app-gate-info-card>
     </div>
+    <!--Button Toggle to call the practice layout component-->
     <div class="practice">
         <h2>When you're ready for some practice click the button below!</h2>
         <button class="btn btn-primary mt-0" (click)="showPracticeProblems()">Show Practice Problems</button>
@@ -27,5 +31,14 @@
     <div *ngIf="showPractice">
         <app-practice></app-practice>
     </div>
-    <app-main-footer></app-main-footer>
+    <!--Button Toggle to call the quiz layout component-->
+    <div class="quiz">
+        <h2>When you're ready for a challenge click the button below!</h2>
+        <button class="btn btn-primary mt-0" (click)="showQuizProblems()">Go for the Quiz</button>
+    </div>
+    <div *ngIf="showQuiz">
+        <app-quiz></app-quiz>
+    </div>
+    <!--Credit for the all the images present in this module-->
+    <p>Image credit to Arturo Urquizo from https://commons.wikimedia.org/</p>
 </div>
