@@ -39,39 +39,39 @@ export const practice_questions = [
 
 export const quiz_questions = [
     {
-        question: "Question 1: ",
-        correct_answer: "",
-        wrong_answer1: "",
-        wrong_answer2: "",
-        wrong_answer3: ""
+        question: "Question 1: If we're given an NMOS and a PMOS with the D of the NMOS chained to the S of the PMOS...",
+        correct_answer: "Correct Answer",
+        wrong_answer1: "Wrong Answer",
+        wrong_answer2: "Wrong Answer",
+        wrong_answer3: "Wrong Answer"
     },
     {
         question: "Question 2: ",
-        correct_answer: "",
-        wrong_answer1: "",
-        wrong_answer2: "",
-        wrong_answer3: ""
+        correct_answer: "Correct Answer",
+        wrong_answer1: "Wrong Answer",
+        wrong_answer2: "Wrong Answer",
+        wrong_answer3: "Wrong Answer"
     },
     {
         question: "Question 3: ",
-        correct_answer: "",
-        wrong_answer1: "",
-        wrong_answer2: "",
-        wrong_answer3: ""
+        correct_answer: "Correct Answer",
+        wrong_answer1: "Wrong Answer",
+        wrong_answer2: "Wrong Answer",
+        wrong_answer3: "Wrong Answer"
     },
     {
         question: "Question 4: ",
-        correct_answer: "",
-        wrong_answer1: "",
-        wrong_answer2: "",
-        wrong_answer3: ""
+        correct_answer: "Correct Answer",
+        wrong_answer1: "Wrong Answer",
+        wrong_answer2: "Wrong Answer",
+        wrong_answer3: "Wrong Answer"
     },
     {
         question: "Question 5: ",
-        correct_answer: "",
-        wrong_answer1: "",
-        wrong_answer2: "",
-        wrong_answer3: ""
+        correct_answer: "Correct Answer",
+        wrong_answer1: "Wrong Answer",
+        wrong_answer2: "Wrong Answer",
+        wrong_answer3: "Wrong Answer"
     }
     
 ]

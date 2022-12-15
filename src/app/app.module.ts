@@ -24,6 +24,7 @@ import { ModuleListPageComponent } from './module-list-page/module-list-page.com
 import { TransistorModuleComponent } from './transistor-module/transistor-module.component';
 import { BinaryModuleComponent } from './binary-module/binary-module.component';
 import { LogicGatesPracticeComponent } from "./logic-gates-module/practice-layout/practice.component";
+import { NoiseModuleComponent } from './noise-margins-module/noise-margins.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { LogicGatesPracticeComponent } from "./logic-gates-module/practice-layou
     ModuleListPageComponent,
     TransistorModuleComponent,
     BinaryModuleComponent,
-    LogicGatesPracticeComponent
+    LogicGatesPracticeComponent,
+    NoiseModuleComponent
   ],
   providers: [],
   bootstrap: [AppComponent],

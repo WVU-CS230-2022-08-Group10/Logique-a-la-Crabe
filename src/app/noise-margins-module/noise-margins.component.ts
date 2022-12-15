@@ -126,18 +126,17 @@ export class NoiseModuleComponent implements OnInit {
         var wrongButtons = document.getElementById(i.toString())
         if(wrongButtons !=null){
           if(wrongAnswers == 0)
-            wrongButtons.innerHTML = noise_margins_quiz_questions[0].wrong_answer1
+            wrongButtons.innerHTML = noise_margins_practice_questions[0].wrong_answer1
           if(wrongAnswers == 1)
-            wrongButtons.innerHTML = noise_margins_quiz_questions[0].wrong_answer2
+            wrongButtons.innerHTML = noise_margins_practice_questions[0].wrong_answer2
           if(wrongAnswers == 2)
-            wrongButtons.innerHTML = noise_margins_quiz_questions[0].wrong_answer3
+            wrongButtons.innerHTML = noise_margins_practice_questions[0].wrong_answer3
         wrongAnswers++;
         }
       }// End of outside if statement
     }// End of for loop
     if(correctButtonToChange != null)
-    correctButtonToChange.innerHTML = noise_margins_quiz_questions[0].correct_answer;
-
+    correctButtonToChange.innerHTML = noise_margins_practice_questions[0].correct_answer;
   }
 
   // Used for randomly generating correct answers
