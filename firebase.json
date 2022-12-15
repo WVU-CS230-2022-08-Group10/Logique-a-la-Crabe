@@ -3,8 +3,7 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "public",
-    "site": "logique-a-la-crab",
+    "public": "dist/logique-a-la-crabe-2.0",
     "ignore": [
       "firebase.json",
       "**/.*",

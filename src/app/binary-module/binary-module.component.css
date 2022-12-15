@@ -1,0 +1,41 @@
+ul{
+    list-style-type: none;
+}
+.show-button{
+    width: 14%;
+    height: 5%;
+}
+ol li{
+    display: inline;
+    margin-right: 8px;
+}
+.lesson{
+    width: 40%;
+    margin-left: 2%;
+    display: inline-block;
+}
+.intro {
+    margin-top: .5in;
+    margin-left: .5in;
+    margin-right: .5in;
+}
+.practice {
+    margin-top: .5in;
+    margin-left: .5in;
+    margin-right: .5in;
+    margin-bottom: .5in;
+}
+.btn-primary {
+    background-color: darkslategrey;
+    border-color: darkslategrey;
+}
+a {
+    color: white;
+}
+p {
+    font-size: large;
+    line-height: 2;
+}
+#content {
+    padding-bottom: 95px;
+}
