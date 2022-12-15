@@ -1,26 +1,28 @@
-<body>
+<div class="container-fluid">
 
     <div class="purpose">
         <h1 style="font-weight:bold;">Welcome to Logique a la Crabe!</h1>
-        <h2>Our goal is to teach digital logic in its simplest form. The information is presented descriptively while remaining easy 
-           <br> to understand for aspiring computer engineers. Each module teaches about its subject, then offers practice questions.
-           <br> Once you're ready, there are quizzes available to test your knowledge.
+        <h2>Our goal is to teach digital logic in its simplest form.
+            <br>Each module teaches a fundemental subject related digital logic in easy to understand terms, then offers
+            practice problems and quizzes.
+            <br> Our main feature (still in development) is the Circuit Canvas where you can implement your own digital
+            logic designs.
         </h2>
     </div>
 
     <div class="modules">
         <h1 style="font-weight:bold;">Available Modules</h1>
     </div>
-    
-    <div class = "btn-group" style="width:100%">
+
+    <div class="btn-group" style="width:100%">
         <button type="button" class="btn btn-light">
-            <a class="nav-link" routerLink="/Binary">Binary Numbers</a>
+            <a class="nav-link" routerLink="/binary-numbers">Binary Numbers</a>
         </button>
         <button type="button" class="btn btn-light">
             <a class="nav-link" routerLink="/logic-gates">Logic Gates and Truth Tables</a>
         </button>
         <button type="button" class="btn btn-light">
-            <a class="nav-link" routerLink="/NoiseMargins">Noise Margins</a>
+            <a class="nav-link" routerLink="/noise-margins">Noise Margins</a>
         </button>
         <button type="button" class="btn btn-light">
             <a class="nav-link" routerLink="/transistors">NMOS and PMOS Transistors</a>
@@ -29,17 +31,18 @@
 
     <div class="row">
         <img src="assets/logic-gates/AND_gate.svg" alt="and_gate" style="width:150px;height:120px">
-        <img src="assets/logic-gates/Buffer_gate.svg" alt="buffer_gate" style="width:150px;height:120px">
-        <img src="assets/logic-gates/NAND_gate.svg" alt="nand_gate" style="width:150px;height:120px">
-        <img src="assets/logic-gates/NOR_gate.svg" alt="nor_gate" style="width:150px;height:120px">
         <img src="assets/logic-gates/NOT_gate.svg" alt="not_gate" style="width:150px;height:120px">
+        <img src="assets/logic-gates/Buffer_gate.svg" alt="buffer_gate" style="width:150px;height:120px">
         <img src="assets/logic-gates/OR_gate.svg" alt="or_gate" style="width:150px;height:120px">
-        <img src="assets/logic-gates/XNOR.png" alt="xnor_gate" style="width:150px;height:120px">
-        <img src="assets/logic-gates/XOR_gate.svg" alt="xor_gate" style="width:150px;height:120px">
+        <img src="assets/logic-gates/AND_gate.svg" alt="and_gate" style="width:150px;height:120px">
+        <img src="assets/logic-gates/NOT_gate.svg" alt="not_gate" style="width:150px;height:120px">
+        <img src="assets/logic-gates/Buffer_gate.svg" alt="buffer_gate" style="width:150px;height:120px">
+        <img src="assets/logic-gates/OR_gate.svg" alt="or_gate" style="width:150px;height:120px">
+
+
     </div>
 
-    <div class = "crab">
-        <img src="assets/crab_left_claw_up.png" alt="crab mascot" style="width:400px; height:300px">
+    <div class="d-flex justify-content-center">
+        <img class="crab" src="assets/crab_left_claw_up.png" alt="crab mascot" style="width:400px; height:300px">
     </div>
-
-</body>
+</div>
