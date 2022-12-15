@@ -1,3 +1,4 @@
+<!-- User login and create account page-->
 <div class="d-flex flex-row flex-wrap justify-content-center">
 
     <div class="card">
@@ -5,16 +6,18 @@
         <div class="card-header" id="header">
             <h2>Sign up and start saving your progress</h2>
         </div>
-
+        <!-- ngForms used to save user email and password-->
         <div class="card-body">
+            <!-- Forms used for signing up for the first time-->
             <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
-
+                <!-- User email input is saved into ngModel called email. This field is required for the button to work-->
                 <div class="input-group mb-3">
                     <span class="input-group-text">Email</span>
                     <input type="text" class="form-control" placeholder="devine@mix.wvu.edu" ngModel name="email"
                         required email>
                 </div>
-
+                <!-- User password input is saved into ngModel called password. This field is required for the button to work. Min
+                 of 8 characters-->
                 <div class="input-group mb-3">
                     <span class="input-group-text">Password</span>
                     <input type="password" class="form-control" placeholder="min 8 characters" ngModel name="password"
@@ -26,7 +29,8 @@
                     <input type="password" class="form-control" placeholder="must match password" ngModel
                         name="passwordConfirm" required password minlength="8">
                 </div>
-
+                <!--When button is clicked, data is sent to firebase backend and stored
+                A popup appears to thank the user for creating an account -->
                 <button class="btn btn-dark m1" type="submit" [disabled]="!authForm.valid"
                     (click)="buttonClicked='Login'" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Sign up
@@ -37,26 +41,26 @@
     </div>
 
     <div class="card">
-
+        <!-- Forms used for existing user logging in to their account-->
         <div class="card-header" id="header">
             <h2>Login to an existing account</h2>
         </div>
 
         <div class="card-body">
             <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
-
+            <!-- User email input is saved into ngModel called email. This field is required for the button to work-->
                 <div class="input-group mb-3">
                     <span class="input-group-text">Email</span>
                     <input type="text" class="form-control" placeholder="devine@mix.wvu.edu" ngModel name="email"
                         required email>
                 </div>
-
+            <!-- User password is saved into ngModel called password. This field is required.-->
                 <div class="input-group mb-3">
                     <span class="input-group-text">Password</span>
                     <input type="password" class="form-control" placeholder="password" ngModel name="password" required
                         password minlength="8">
                 </div>
-
+                <!-- User data is sent to firebase and compared with emails and passwords in the database-->
                 <button class="btn btn-dark m1" type="submit" [disabled]="!authForm.valid"
                     (click)="buttonClicked='SignUp'">
                     Login
@@ -67,15 +71,16 @@
     </div>
 
 </div>
-
+<!-- Popup that appears when the sign up button is clicked. Created with Bootstrap modal-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
+        <!-- Header that thanks user for creating an account-->
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title" id="exampleModalLabel">Thank you for creating an account!</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-
+            <!-- Images of all logic gates present in our website presented in a row-->
             <div class="modal-body" id="body">
                 <div class="row">
                     <img src="assets/logic-gates/AND_gate.svg" alt="and_gate" style="width:70px;height:50px">
@@ -87,7 +92,7 @@
                     <img src="assets/logic-gates/XOR_gate.svg" alt="xor_gate" style="width:70px;height:50px">
                 </div>
             </div>
-
+            <!-- Button to return to the home screen-->
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                     <a class="nav-link" href="#">Click here to get back to learning</a>
