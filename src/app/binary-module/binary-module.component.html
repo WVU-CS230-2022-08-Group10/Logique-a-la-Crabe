@@ -1,16 +1,54 @@
-<body>
-    <h1 class="title mt-5">Binary Numbers: Signed-Magnitude, Unsigned</h1>
-
+<div class="layout container-fluid" id="content">
     <div class="intro">
-        <h1>Introduction</h1>
-        <p>Binary numbers are just like decimal numbers, except that they go from 0-1 instead of 0-9...</p>
+        <h1>A Quick Introduction to Binary Numbers</h1>
+        <p> 
+            Binary numbers are just like normal numbers, except they're a little different. Instead of normal numbers going from 0 to 9,
+            they go from 0-1! For example, both rows of numbers below go from 0-10, except they're both in different number systems!
+        </p>
+        <p class="text-center">
+            Decimal: 0  1   2   3    4    5    6    7     8     9    10
+        </p>
+        <p class="text-center">
+            Binary:  0  1  10  11  100  101  110  111  1000  1001  1010
+        </p>
+        <p>
+            Hopefully by that example, you can see the pattern of whats going on. Just like the decimal system, each numbers place
+            is the equivelent to the base number to that power. In the decimal system, theres the 1s column, the 10s column, and the 100s column, 
+            and so on. In binary,
+            there's instead 1s column, the 2s column, the 4s column, the 8s column, and so on. Each column out in the binary number system is 
+            2 to that numbers power. For example, this is what converting a decimal number to a binary number looks like:
+        </p>
+        <p class="text-center">
+            1101 = 8(1) + 4(1) + 2(0) + 1(1) = 13
+        </p>
+        <p>
+            Just like the decimal numbers, you can also do math with the binary numbers! For example an addition problem would look like the one below:
+        </p>
+        <p class="text-center">
+            1001 + 0110 = 1111 which is also equivelent to 9 + 6 = 15
+        </p>
+        <p>
+            When it comes to subtraction, a thing called two's compliment must be used. This is where the first digit of the binary number indicates if
+            the number is positive or negative. If the first number is a 1, then the number is negative. If its a 0, then its positive. This is what it
+            looks like converting a twos compliment binary number to a decimal number:
+        </p>
+        <p class="text-center">
+            1101 = -8(1) + 4(1) + 2(0) + 1(1) = -3
+        </p>
+        <p>
+            So when doing a subtraction problem, it would be an addition problem with one of the numbers being negative. The following example is what that
+            would look like:
+        </p>
+        <p class="text-center">
+            1101 + 0010 = -3 + 2 = -1
+        </p>
         <h3 class="mb-0">Ready to move on? Try the practice problems: </h3>
         <button class="btn btn-primary mt-0 show-button" (click)="showPracticeProblems()">Practice</button>
     </div>
     <div *ngIf="showPractice">
         <h1 class="mt-4">Practice Problems</h1>
         <ul>
-            <li id="question">Question 1:</li>
+            <li id="question">Question 1: What is the jawnt?</li>
             <li>
                 <ol>
                     <li><button class="btn btn-outline-info" id="1"
@@ -49,4 +87,4 @@
             <h3 *ngIf="isCorrect">That's correct! Next problem...</h3>
         </ul>
     </div>
-</body>
+</div>
