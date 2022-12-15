@@ -38,7 +38,7 @@
                 the output in the row would be 1 because of the way the OR gate works. Truth tables get more complicated the more gates/ inputs that are added to it.
             </p>
             <h3 class="mb-0">Ready to move on? Try the practice problems: </h3>
-            <button class="btn btn-primary mt-0 show-button" (click)="showPracticeProblems()">Practice</button>
+            <button class="btn btns btn-primary mt-0 show-button" (click)="showPracticeProblems()">Practice</button>
         </div>
         <div *ngIf="showPractice">
             <h1 class="mt-4">Practice Problems</h1>
@@ -46,13 +46,13 @@
                 <li id="question"></li>
                 <li>
                     <ol>
-                        <li><button class="btn btn-outline-info" id="1"
+                        <li><button class="btn btns btn-outline-info" id="1"
                                 (click)="changePracticeQuestion('1')">Answer1</button></li>
-                        <li><button class="btn btn-outline-info" id="2"
+                        <li><button class="btn btns btn-outline-info" id="2"
                                 (click)="changePracticeQuestion('2')">Answer2</button></li>
-                        <li><button class="btn btn-outline-info" id="3"
+                        <li><button class="btn btns btn-outline-info" id="3"
                                 (click)="changePracticeQuestion('3')">Answer3</button></li>
-                        <li><button class="btn btn-outline-info" id="4"
+                        <li><button class="btn btns btn-outline-info" id="4"
                                 (click)="changePracticeQuestion('4')">Answer4</button></li>
                     </ol>
                 </li>
@@ -60,7 +60,7 @@
                 <h3 *ngIf="isCorrect">That's correct! Next problem...</h3>
             </ul>
             <h3>Feel prepared? Try the quiz problems below to complete the module</h3>
-            <button class="btn btn-primary mt-0 show-button" (click)="showQuizProblems()">Quiz</button>
+            <button class="btn btns btn-primary mt-0 show-button" (click)="showQuizProblems()">Quiz</button>
         </div>
         <div *ngIf="showQuiz">
             <h1 class="mt-4">Quiz Questions</h1>
@@ -68,13 +68,13 @@
                 <li id="question">Question 1:</li>
                 <li>
                     <ol>
-                        <li><button class="btn btn-outline-info" id="1"
+                        <li><button class="btn btns btn-outline-info" id="1"
                                 (click)="changeQuizQuestion('1')">Answer1</button></li>
-                        <li><button class="btn btn-outline-info" id="2"
+                        <li><button class="btn btns btn-outline-info" id="2"
                                 (click)="changeQuizQuestion('2')">Answer2</button></li>
-                        <li><button class="btn btn-outline-info" id="3"
+                        <li><button class="btn btns btn-outline-info" id="3"
                                 (click)="changeQuizQuestion('3')">Answer3</button></li>
-                        <li><button class="btn btn-outline-info" id="4"
+                        <li><button class="btn btns btn-outline-info" id="4"
                                 (click)="changeQuizQuestion('4')">Answer4</button></li>
                     </ol>
                 </li>

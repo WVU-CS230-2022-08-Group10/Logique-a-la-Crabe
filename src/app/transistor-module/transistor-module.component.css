@@ -33,3 +33,8 @@ img{
     height: 75%;
     width: 75%;
 }
+.btns{
+    background-color: darkslategrey;
+    border-color: darkslategrey;
+    color: white;
+}
