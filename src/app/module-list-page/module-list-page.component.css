@@ -1,3 +1,7 @@
+.purpose{
+    margin-top: .5in;
+    text-align: center;
+}
 .title{
     text-align: center;
     font-size: 45px;
@@ -5,4 +9,21 @@
 .list-element{
     margin-top: 1%;
     font-size: 26px;
+}
+.btn-group button {
+    background-color: darkslategrey; 
+    border: 1px solid darkslategrey; 
+    color: white; 
+    padding: 10px 24px;
+}
+.modules{
+    text-align: center;
+    margin-top: .5in;
+}
+.row{
+    margin-top: .5in;
+    margin-left: 1.5in;
+}
+.crab{
+    text-align: center;
 }
